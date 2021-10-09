@@ -28,7 +28,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 2em 0 0.5em;
+  margin: 2.5em 0 0.5em;
   line-height: 1.2;
   font-family: $header-font-family;
   font-weight: bold;
@@ -94,6 +94,10 @@ table,
 fieldset {
   orphans: 3;
   widows: 3;
+}
+ul,
+ol {
+  padding-inline-start: 1em;
 }
 
 /* abbreviations */

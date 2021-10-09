@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "코딩은 어려워"
-title_separator          : "-"
+title                    : "코딩은 어려워🤣"
+title_separator          : "Coding is difficult but interesting."
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Dony"
-description              : "Today I(jindonyy) Learned!"
+description              : "Today I Learned!"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -101,9 +101,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Dony"
+  name             : "Dony :)"
   avatar           : "/assets/images/profile.jpg"
-  bio              : "Today I Learned!"
+  bio              : "Coding is difficult but interesting.<br>Today I Learned!👊"
   location         : "Seoul"
   email            :
   links:
