@@ -1,6 +1,7 @@
 /* ==========================================================================
    BASE ELEMENTS
    ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
 
 html {
   /* sticky footer fix */
@@ -60,7 +61,7 @@ h6 {
 
 small,
 .small {
-  font-size: $type-size-6;
+  font-size: $type-size-7;
 }
 
 p {
@@ -126,6 +127,8 @@ blockquote {
 /* links */
 
 a {
+  text-decoration: none; 
+  
   &:focus {
     @extend %tab-focus;
   }
@@ -265,7 +268,7 @@ figcaption {
   margin-bottom: 0.5em;
   color: $muted-text-color;
   font-family: $caption-font-family;
-  font-size: $type-size-6;
+  font-size: $type-size-7;
 
   a {
     -webkit-transition: $global-transition;

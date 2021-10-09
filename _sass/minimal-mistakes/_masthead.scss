@@ -4,6 +4,7 @@
 
 .masthead {
   position: relative;
+  font-size: 1.3em;
   border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -23,7 +24,7 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    font-family: $sans-serif-narrow;
+    font-family: $nanum-gothic;
 
     @include breakpoint($x-large) {
       max-width: $max-width;
@@ -55,7 +56,7 @@
 
 .site-subtitle {
   display: block;
-  font-size: $type-size-8;
+  font-size: $type-size-9;
 }
 
 .masthead__menu {

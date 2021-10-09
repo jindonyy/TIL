@@ -12,7 +12,7 @@
   max-width: 100%;
   padding-left: 1em;
   padding-right: 1em;
-  font-family: $sans-serif;
+  font-family: $nanum-gothic;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
   -webkit-animation-delay: 0.3s;
@@ -25,7 +25,7 @@
   ol {
     padding: 0;
     list-style: none;
-    font-size: $type-size-6;
+    font-size: $type-size-7;
 
     @include breakpoint($large) {
       float: right;
@@ -61,7 +61,7 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-family: $sans-serif;
+    font-family: $nanum-gothic;
   }
 
   li {
@@ -73,7 +73,7 @@
       display: block;
       margin-bottom: 0.25em;
       padding: 0.5em 1em;
-      font-family: $sans-serif;
+      font-family: $nanum-gothic;
       font-size: 14px;
       font-weight: bold;
       line-height: 1.5;
@@ -123,7 +123,7 @@
     padding: 1em 2em;
     float: left;
     width: 50%;
-    font-family: $sans-serif;
+    font-family: $nanum-gothic;
     font-size: $type-size-5;
     font-weight: bold;
     text-align: center;
@@ -352,7 +352,7 @@
       display: inline-block;
       padding: 0.5em 2.5em 0.5em 1em;
       color: $gray;
-      font-size: $type-size-6;
+      font-size: $type-size-7;
       font-weight: bold;
       border: 1px solid $light-gray;
       border-radius: $border-radius;
@@ -439,7 +439,7 @@
 
 .nav__list .nav__items {
   margin: 0;
-  font-size: 1.25rem;
+  font-size: $type-size-4;
 
   a {
     color: inherit;
@@ -483,7 +483,7 @@
 .nav__title {
   margin: 0;
   padding: 0.5rem 0.75rem;
-  font-family: $sans-serif-narrow;
+  font-family: $nanum-gothic;
   font-size: $type-size-5;
   font-weight: bold;
 }
@@ -492,8 +492,8 @@
   display: block;
   margin: 0.5rem 0;
   padding: 0.25rem 0;
-  font-family: $sans-serif-narrow;
-  font-size: $type-size-6;
+  font-family: $nanum-gothic;
+  font-size: $type-size-7;
   font-weight: bold;
   text-transform: uppercase;
   border-bottom: 1px solid $border-color;
@@ -504,7 +504,7 @@
      ========================================================================== */
 
 .toc {
-  font-family: $sans-serif-narrow;
+  font-family: $nanum-gothic;
   color: $gray;
   background-color: $background-color;
   border: 1px solid $border-color;
@@ -514,7 +514,7 @@
 
   .nav__title {
     color: #fff;
-    font-size: $type-size-6;
+    font-size: $type-size-7;
     background: $primary-color;
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
@@ -531,10 +531,10 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: $type-size-6;
+  font-size: $type-size-7;
 
   @include breakpoint($large) {
-    font-size: $type-size-7;
+    font-size: $type-size-8;
   }
 
   a {
