@@ -3,8 +3,9 @@
    ========================================================================== */
 
 .archive {
-  margin-top: 1em;
+  margin-top: 2.5em;
   margin-bottom: 2em;
+  padding-left: 30px;
 
   @include breakpoint($large) {
     float: right;
@@ -32,7 +33,7 @@
 }
 
 .archive__subtitle {
-  margin: 1.414em 0 0.5em;
+  margin: -0.67em 0 0.7em;
   padding-bottom: 0.7em;
   font-size: $type-size-4;
   color: $muted-text-color;
@@ -43,9 +44,15 @@
   }
 }
 
+.archive__item-date {
+  margin: 0;
+  font-size: 0.85em;
+}
+
 .archive__item-title {
-  margin-bottom: 0.25em;
-  font-size: 1.3em;
+  margin-top: 0.35em;
+  margin-bottom: 1.5em;
+  font-size: $h-size-2;
   font-family: $nanum-gothic;
   line-height: initial;
   overflow: hidden;
@@ -75,7 +82,7 @@
 
 .archive__item-excerpt {
   margin-top: 0;
-  font-size: $type-size-6;
+  font-size: 0.85em;
 
   & + p {
     text-indent: 0;
