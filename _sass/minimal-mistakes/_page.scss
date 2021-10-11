@@ -8,7 +8,6 @@
   margin-right: auto;
   padding-left: 2em;
   padding-right: 2em;
-  background: #fff;
   flex: 1 0 auto;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -34,7 +33,6 @@ body {
 
 .initial-content,
 .search-content {
-  background: #f5f5f5;
   display: flex;
   flex: 1 0 auto;
 }
