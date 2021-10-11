@@ -1,6 +1,5 @@
 ---
 title: "원시타입과 참조타입"
-excerpt: "원시타입과 참조타입에 대해 알아보자."
 layout: single
 classes: wide
 categories:

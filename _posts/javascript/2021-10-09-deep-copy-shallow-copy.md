@@ -1,6 +1,5 @@
 ---
 title: "깊은 복사 VS 얕은 복사"
-excerpt: "타입에 따라 복사의 방법이 다르다."
 layout: single
 classes: wide
 categories:
