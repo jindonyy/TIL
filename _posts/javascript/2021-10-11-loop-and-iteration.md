@@ -16,7 +16,7 @@ date: 2021-10-10
 ## for
 * 문법
 
-```
+```javascript
 for (초기문; 조건문; 증감문){
   실행문;
 } // 실행문이 한 줄인 경우 중괄호 생략 가능
@@ -28,7 +28,7 @@ for (초기문; 조건문; 증감문){
   3. 실행문이 실행된다. 많은 문장을 실행할 경우엔, { } 를 써서 문장들을 묶어준다.
   4. 갱신 구문인 증감문이 존재한다면 실행되고, 2번째 단계로 돌아가 falsy가 반환될 때까지 계속 반복 된다.
 
-```
+```javascript
 var i;
 function init () {
   console.log('A');
@@ -56,7 +56,7 @@ for (init(); condition(); update()) {
 ## for ... in
 * 문법
 
-```
+```javascript
 for (변수 in 객체){
   실행문;
 }
@@ -64,7 +64,7 @@ for (변수 in 객체){
 * for문과 달리 객체의 갯수만큼 반복문을 돈다.
 * 지정한 변수는 key(또는 index)를 나타낸다.
 
-```
+```javascript
 let obj = { a: 1, b: 2, c: 3 };
 for (let i in obj) {
   console.log(i, object[i]);
@@ -85,7 +85,7 @@ for (let i in arr) {
 ## while
 * 문법
 
-```
+```javascript
 while (조건문;){
   실행문;
 }
@@ -93,7 +93,7 @@ while (조건문;){
 * 조건문이 falsy로 판별될 때까지 실행문을 반복한다.
 * for문과 달리 조건문만 들어가므로 초기문이 반복문 밖에 있을 때 주로 사용한다.
 
-```
+```javascript
 var i = 0;
 while (i < 3) {
   console.log(i); // 0, 1, 2
@@ -110,7 +110,7 @@ while (i >= 0) {
 ## do ... while
 * 문법
 
-```
+```javascript
 do {
   실행문
 }
@@ -119,7 +119,7 @@ while (조건문);
 * 조건문이 falsy로 판별될 때까지 실행문을 반복한다.
 * while문과 달리 구문이 실행된 뒤에 테스트 조건이 평가됨으로 구문은 무조건 한 번은 실행된다.
 
-```
+```javascript
 let result = '';
 let i = 0;
 do {
@@ -133,7 +133,8 @@ console.log(result); // "12345"
 ## break문
 * 반복문이나 switch문, label문에서 어떤 조건에 해당될 때 반복문을 멈추어 준다.
 * break문을 만나는 즉시 반복문은 종료된다.
-```
+
+```javascript
 let result = '';
 let i = 0;
 while(i < 5) {
@@ -148,7 +149,8 @@ console.log(result); // "12"
 ## continue문
 * 반복문이나 switch문, label문에서 어떤 조건에 해당될 때 해당 반복문을 넘겨준다.
 * break문과 달리 continue문은 해당 반복문만을 종료시키기 때문에 반복문이 종료되기 전까지 여러번 사용할 수 있다.
-```
+
+```javascript
 let result = '';
 let i = 0;
 while(i < 8) {
@@ -158,5 +160,5 @@ while(i < 8) {
   result += i;
 }
 
-console.log(result); // "124568"
+console.log(result.length); // "124568"
 ```
