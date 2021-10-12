@@ -6,7 +6,7 @@ categories:
   - javascript
 tags:
   - [javascript, loop, for, for...in, while, do...while]
-date: 2021-10-10
+date: 2021-10-11
 ---
 
 개발자마다 주로 사용하는 반복문이 있을 것이다.  
