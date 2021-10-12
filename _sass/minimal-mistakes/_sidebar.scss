@@ -142,7 +142,7 @@
     left: calc(#{$right-sidebar-width} / 2);
     width: 140px;
     height: 140px;
-    background: #52ecc1;
+    background: $point-color;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
