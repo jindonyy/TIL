@@ -5,14 +5,14 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, convert to a string, String, toString]
+  - [javascript, string, convert to a string, String, toString]
 date: 2021-10-12
 ---
 
 1과 "1"은 다르다.  
 배열에 있는 숫자들을 이어적어야하는 상황이 생긴다면 어떻게 해야할까?  
-이럴 때 Number인 1을 String인 "1"로 바꿔주어야 하는 것이다.  
-그럼 이제 Number를 String으로 바꾸어주는 메소드를 알아보자.
+이럴 때 Number인 1을 String인 "1"로 바꿔줘야 한다.  
+그럼 Number를 String으로 바꾸어주는 메소드를 알아보도록 하자.
 
 ## String  
 * 문법: String(value)  
@@ -43,8 +43,11 @@ String(null); // 'null'
 ```
 
 ## 덧셈 이용하기
-숫자 + 문자열은 문자열이다.
+숫자 + 숫자 = 숫자  
+문자열 + 문자열 = 문자열  
+그렇다면 숫자 + 문자열은? 문자열이다.  
+이를 이용해서 메서드를 쓰지 않고, 숫자에 **빈문자열**을 더해서 숫자를 문자열로 바꿀 수 있다.
 
 ```javascript
-  12.34 + ""; // "12.34
+12.34 + ""; // '12.34'
 ```

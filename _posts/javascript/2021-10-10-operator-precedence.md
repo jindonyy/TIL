@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, operator precedence]
+  - [javascript, operator, operator precedence]
 date: 2021-10-10
 ---
 
