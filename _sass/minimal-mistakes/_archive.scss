@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .archive {
-  margin-top: 2.5em;
+  margin-top: 2em;
   margin-bottom: 2em;
   padding-left: 30px;
 
@@ -17,6 +17,12 @@
     width: calc(100% - #{$right-sidebar-width});
     // padding-right: $right-sidebar-width;
   }
+
+  .archive__item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+  }
 }
 
 .archive__item {
@@ -24,6 +30,7 @@
 
   a {
     position: relative;
+    color: $link-color;
     z-index: 10;
   }
 
@@ -33,26 +40,22 @@
 }
 
 .archive__subtitle {
-  margin: -0.67em 0 0.9em;
+  margin: -0.67em 0 1.3em;
   padding-bottom: 0.7em;
   font-size: $type-size-4;
   color: $muted-text-color;
   border-bottom: 1px solid $border-color;
-
-  + .list__item .archive__item-title {
-    margin-top: 0.5em;
-  }
 }
 
 .archive__item-date {
   margin: 0;
-  font-size: 0.85em;
+  font-size: 0.8em;
+  color: $primary-color;
 }
 
 .archive__item-title {
-  margin-top: 0.35em;
-  margin-bottom: 1.5em;
-  font-size: $h-size-2;
+  margin: 0;
+  font-size: $h-size-3;
   font-family: $nanum-gothic;
   line-height: initial;
   overflow: hidden;
@@ -218,7 +221,7 @@
   }
 
   .archive__item-title {
-    margin-top: 0.5em;
+    margin: 0.5em 0;
     font-size: $type-size-5;
   }
 
