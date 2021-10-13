@@ -21,16 +21,16 @@ date: 2021-10-13
 * value가 NaN이나 Infinity인 경우 false를 반환한다.
 * **IE에선 작동하지 않는다.** (한국에선 아직 사용하기 이른것인가..)
 ```javascript
-  // parseInt를 사용한 방식
-  1234 == parseInt(1234) // true
-  12.34 == parseInt(12.34) // false
+// parseInt를 사용한 방식
+1234 == parseInt(1234) // true
+12.34 == parseInt(12.34) // false
 
-  Number.isInteger(1234); // true
-  Number.isInteger(12.34); // false
-  Number.isInteger(-10); // true
-  Number.isInteger(9999999999); // true
-  Number.isInteger(NaN); // false
-  Number.isInteger(Infinity); // false
-  Number.isInteger('ab'); // false
-  Number.isInteger(true); // false
+Number.isInteger(1234); // true
+Number.isInteger(12.34); // false
+Number.isInteger(-10); // true
+Number.isInteger(9999999999); // true
+Number.isInteger(NaN); // false
+Number.isInteger(Infinity); // false
+Number.isInteger('ab'); // false
+Number.isInteger(true); // false
 ```
