@@ -3,7 +3,7 @@ title: "<span>프로그래머스</span><span>Lv1</span> 모의고사"
 layout: single
 classes: wide
 categories:
-  - javascript
+  - algorithm
 tags:
   - [javascript, algorithm, programers, Level1]
 date: 2021-10-14
