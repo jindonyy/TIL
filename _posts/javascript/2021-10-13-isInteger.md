@@ -20,6 +20,7 @@ date: 2021-10-13
 * value가 정수인지 아닌지 판별하여 boolean값으로 반환한다.
 * value가 NaN이나 Infinity인 경우 false를 반환한다.
 * **IE에선 작동하지 않는다.** (한국에선 아직 사용하기 이른것인가..)
+
 ```javascript
 // parseInt를 사용한 방식
 1234 == parseInt(1234) // true
