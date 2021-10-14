@@ -38,25 +38,28 @@ body {
 }
 
 .page {
-  padding-left: 20px;
-
+  
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
   }
-
+  
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
+    padding-left: 20px;
     padding-right: $right-sidebar-width;
   }
-
+  
   .page__inner-wrap {
     float: left;
     margin: 2.5em 0 0;
-    padding-left: 30px;
     width: 100%;
     clear: both;
+    
+    @include breakpoint($x-large) {
+      padding-left: 30px;
+    }
 
     .page__content,
     .page__meta,
@@ -67,7 +70,9 @@ body {
       margin-right: 0;
       width: 100%;
       clear: both;
+    }
 
+    .page__content {
       h1,
       h2,
       h3,
@@ -83,6 +88,10 @@ body {
       h2 {
         margin-top: 3rem;
       }
+
+      *:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 }
@@ -94,6 +103,16 @@ body {
   a {
     color: $text-color;
     text-decoration: none;
+  }
+
+  span {
+    display: inline-block;
+    padding: 0.4em;
+    margin-right: 0.4em;
+    font-size: 0.6em;
+    font-weight: 400;
+    border: 1px solid #6f777d;
+    border-radius: $border-radius;
   }
 
   & + .page__meta {
@@ -303,7 +322,7 @@ body {
    ========================================================================== */
 
 .page__meta {
-  margin-top: 2em;
+  margin-top: 4em;
   color: $muted-text-color;
   font-family: $nanum-gothic;
   font-size: $type-size-7;
@@ -346,7 +365,7 @@ body {
 .page__taxonomy-item {
   display: inline-block;
   margin-right: 5px;
-  margin-bottom: 8px;
+  margin-top: 8px;
   padding: 5px 10px;
   text-decoration: none;
   border: 1px solid mix(#000, $border-color, 25%);
@@ -531,6 +550,7 @@ body {
 .page__related {
   @include clearfix();
   float: left;
+  width: 100%;
   margin-top: 2em;
   padding-top: 1em;
   border-top: 1px solid $border-color;
@@ -541,7 +561,7 @@ body {
   }
 
   @include breakpoint($x-large) {
-    width: calc(100% - #{$right-sidebar-width});
+    width: calc(100% - #{$right-sidebar-width + 50px});
   }
 
   a {

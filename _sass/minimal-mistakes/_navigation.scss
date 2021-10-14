@@ -61,13 +61,13 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    font-size: 0;
     font-family: $nanum-gothic;
+    text-align: center;
   }
 
   li {
-    display: block;
-    float: left;
-    margin-left: -1px;
+    display: inline-block;
 
     a {
       display: block;
@@ -80,7 +80,6 @@
       text-align: center;
       text-decoration: none;
       color: $muted-text-color;
-      border: 1px solid mix(#000, $border-color, 25%);
       border-radius: 0;
 
       &:hover {
@@ -91,28 +90,13 @@
       &.current.disabled {
         color: #fff;
         background: $primary-color;
+        border-radius: $border-radius
       }
 
       &.disabled {
         color: rgba($muted-text-color, 0.5);
         pointer-events: none;
         cursor: not-allowed;
-      }
-    }
-
-    &:first-child {
-      margin-left: 0;
-
-      a {
-        border-top-left-radius: $border-radius;
-        border-bottom-left-radius: $border-radius;
-      }
-    }
-
-    &:last-child {
-      a {
-        border-top-right-radius: $border-radius;
-        border-bottom-right-radius: $border-radius;
       }
     }
   }
