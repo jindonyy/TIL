@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, number, ceil, floor, round, parseInt]
+  - [js number, number, ceil, floor, round, parseInt]
 date: 2021-10-12
 ---
 
@@ -97,8 +97,8 @@ Math.round('  3.9 5  '); // NaN
 ```
 
 ## parseInt    
-* 문법: parseInt(x[, radix])  
 * x를 정수가 아닌 경우 소수점 이하를 버려 반환해주는(**정수화**) 함수이다.  
+* 문법: parseInt(x[, radix])  
 * radix: 다른 진수의 숫자로 변환하고 싶을 때 사용한다. 2 ~ 36진수까지를 정의할 수 있고, 따로 radix가 0이거나 지정하지 않을 경우 10진수로 변환한다. 0을 제외한 범위를 벗어난 진수를 지정할 경우 NaN을 반환한다.
 * <u>x에 문자가 들어있을 경우 중에서 숫자가 먼저 나오는 경우에는 문자열이 나오기 전의 숫자를 반환한다. 문자가 먼저 나오는 경우에는 NaN을 반환한다.</u>
 * <u>빈문자열인 경우나 공백만 있을 경우, NaN을 반환한다.</u>

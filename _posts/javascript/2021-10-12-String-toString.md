@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, string, convert to a string, String, toString]
+  - [js string, string, String, toString]
 date: 2021-10-12
 ---
 
@@ -15,8 +15,8 @@ date: 2021-10-12
 그럼 Number를 String으로 바꾸어주는 메소드를 알아보도록 하자.
 
 ## String  
-* 문법: String(value)  
 * type이 Number인 숫자를 문자열로 변환시켜 반환해주는 함수이다.
+* 문법: String(value)  
 * ``value + ""`` 의 동작을 해주는 함수이므로 undefined나 null을 입력해도 문자로 바꿔준다.
 
 ```javascript
@@ -28,8 +28,8 @@ String(null); // 'null'
 ```
 
 ## toString  
-* 문법: (value).toString([radix]) 
 * type이 Number인 숫자를 문자열로 변환시켜 반환해주는 메서드이다.
+* 문법: (value).toString([radix]) 
 * undefined나 null과 같이 값이 없을 경우 Error가 뜬다.
 * radix: value를 다른 진수로 바꾸어 문자로 바꾸고싶을 때 사용한다. 2 ~ 36진수까지를 정의할 수 있고, 따로 radix를 지정하지 않을 경우 value 그대로 문자로 변환한다. 범위를 벗어난 진수를 지정할 경우 Error가 뜬다.
 

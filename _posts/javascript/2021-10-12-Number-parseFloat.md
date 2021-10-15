@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, number, convert to a number, Number, parseFloat]
+  - [js number, number, Number, parseFloat]
 date: 2021-10-12
 ---
 
@@ -15,8 +15,8 @@ prompt를 통해 입력 받은 숫자로 계산을 해야한다면 어떻게 해
 그럼 String을 Number로 바꾸어주는 메소드를 알아보도록 하자.
 
 ## Number  
-* 문법: Number(string)  
 * 문자열(string)인 숫자를 type이 number인 숫자로 변환시켜 반환해주는 함수이다.
+* 문법: Number(string)  
 * <u>문자열에 문자가 들어있을 경우, NaN을 반환한다.</u>
 * <u>빈문자열인 경우나 공백만 있을 경우, 0을 반환한다.</u>
 * 숫자 앞 뒤에 공백이 있을 경우, 공백을 제거한 뒤 숫자로 반환한다.
@@ -37,8 +37,9 @@ Number('  12. 34'  ); // NaN
 ```
 
 ## parseFloat     
+* 문자열(string)인 숫자를 type이 number인 숫자로 변환시켜 반환해주는 함수이다.
 * 문법: parseFloat(string)  
-* 문자열(string)인 숫자를 type이 number인 숫자로 변환시켜 반환해주는 함수이다. Number함수와 같아보이지만 문자열이 들어갔을 경우 반환 값이 다르다.
+* Number함수와 같아보이지만 문자열이 들어갔을 경우 반환 값이 다르다.
 * <u>문자열에 문자가 들어있을 경우 중에서 숫자가 먼저 나오는 경우에는 문자열이 나오기 전의 숫자를 반환한다. 문자가 먼저 나오는 경우에는 NaN을 반환한다.</u>
 * <u>빈문자열인 경우나 공백만 있을 경우, NaN을 반환한다.</u>
 * 숫자 앞 뒤에 공백이 있을 경우, 공백을 제거한 뒤 숫자로 반환한다.

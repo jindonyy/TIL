@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, integer, isInteger]
+  - [js number, number, isInteger]
 date: 2021-10-13
 ---
 
@@ -16,8 +16,8 @@ date: 2021-10-13
 한번 보도록 하자.
 
 ## isInteger
-* 문법: Number.isInteger(value)
 * value가 정수인지 아닌지 판별하여 boolean값으로 반환한다.
+* 문법: Number.isInteger(value)
 * value가 NaN이나 Infinity인 경우 false를 반환한다.
 * **IE에선 작동하지 않는다.** (한국에선 아직 사용하기 이른것인가..)
 

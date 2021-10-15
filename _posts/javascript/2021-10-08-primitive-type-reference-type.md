@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, type, javascript type]
+  - [js type, type]
 date: 2021-10-08
 ---
 

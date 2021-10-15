@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, type, deep copy, shallow copy, javascript type]
+  - [js copy, type, deep copy, shallow copy]
 date: 2021-10-09
 ---
 

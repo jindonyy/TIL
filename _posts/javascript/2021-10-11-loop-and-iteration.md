@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, loop, for, for...in, while, do...while]
+  - [js loop, loop, for, for...in, while, do...while]
 date: 2021-10-11
 ---
 

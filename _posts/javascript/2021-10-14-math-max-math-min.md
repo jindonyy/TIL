@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [javascript, Math, Math.max, Math.min]
+  - [js number, number, Math, Math.max, Math.min]
 date: 2021-10-14
 ---
 
@@ -13,8 +13,8 @@ date: 2021-10-14
 for문을 돌려서 비교할 수도 있겠지만 간편하게 사용할 수 있는 함수(메서드)가 있다.
 
 ## Math.max
-* 문법: Math.max([value1[, value2[, ...]]])
 * 입력값으로 받은 0개 이상의 숫자 중 **가장 큰** 숫자를 반환해주는 함수이다.
+* 문법: Math.max([value1[, value2[, ...]]])
 * value: 입력받은 값들은 <a href="https://jindonyy.github.io/TIL/javascript/converting-a-string-to-a-number/#number">Number</a>함수처럼 type이 string인 숫자로 바꾸어 계산해주지만 문자가 포함된 문자열은 NaN으로 처리하여 NaN을 반환한다. value를 입력하지 않았을 때는 -Infinity를 반환한다.
 
 ```javascript
@@ -26,8 +26,8 @@ Math.max() // -Infinity
 ```
 
 ## Math.min
-* 문법: Math.min([value1[, value2[, ...]]])
 * 입력값으로 받은 0개 이상의 숫자 중 **가장 작은** 숫자를 반환해주는 함수이다.
+* 문법: Math.min([value1[, value2[, ...]]])
 * value: 입력받은 값들은 <a href="https://jindonyy.github.io/TIL/javascript/converting-a-string-to-a-number/#number">Number</a>함수처럼 type이 string인 숫자로 바꾸어 계산해주지만 문자가 포함된 문자열은 NaN으로 처리하여 NaN을 반환한다. value를 입력하지 않았을 때는 Infinity를 반환한다.
 
 ```javascript
