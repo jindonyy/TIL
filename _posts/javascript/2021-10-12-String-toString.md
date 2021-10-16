@@ -1,5 +1,5 @@
 ---
-title: "숫자를 문자열로 변환하기"
+title: "숫자를 문자열로 변환하기(String, toString)"
 layout: single
 classes: wide
 categories:

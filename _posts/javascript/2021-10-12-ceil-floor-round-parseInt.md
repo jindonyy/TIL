@@ -1,5 +1,5 @@
 ---
-title: "올림, 내림, 반올림, 버림, 정수화"
+title: "올림, 내림, 반올림, 버림, 정수화(ceil, floor, round, parseInt)"
 layout: single
 classes: wide
 categories:

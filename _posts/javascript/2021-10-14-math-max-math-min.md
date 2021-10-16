@@ -1,5 +1,5 @@
 ---
-title: "최댓값, 최솟값 구하기"
+title: "최댓값, 최솟값 구하기(Math.max, Math.min)"
 layout: single
 classes: wide
 categories:

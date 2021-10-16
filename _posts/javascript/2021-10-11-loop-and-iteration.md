@@ -1,5 +1,5 @@
 ---
-title: "반복문"
+title: "반복문(for, for...in, while, do...while)"
 layout: single
 classes: wide
 categories:

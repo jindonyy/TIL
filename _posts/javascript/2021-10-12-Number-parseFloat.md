@@ -1,5 +1,5 @@
 ---
-title: "문자열을 숫자로 변환하기"
+title: "문자열을 숫자로 변환하기(Number, parseFloat)"
 layout: single
 classes: wide
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "부분 문자열 위치 가져오기"
+title: "부분 문자열 위치 가져오기(indexOf, lastIndexOf)"
 layout: single
 classes: wide
 categories:
