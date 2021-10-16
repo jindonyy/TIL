@@ -96,9 +96,11 @@ fieldset {
   orphans: 3;
   widows: 3;
 }
-ul,
-ol {
+ul {
   padding-inline-start: 1em;
+}
+ol {
+  padding-inline-start: 1.2em;
 }
 
 /* abbreviations */

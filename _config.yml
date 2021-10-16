@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "강박증 있는 개발자"
+title                    : "코딩은 어려워🤣"
 title_separator          : "Coding is difficult but interesting."
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Dony"
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Dony :)"
   avatar           : "/assets/images/profile.jpg"
-  bio              : "코딩은 어려워🤣"
+  bio              : "Coding is difficult but interesting."
   location         : "Seoul"
   email            :
   links:
