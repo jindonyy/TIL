@@ -25,6 +25,7 @@ String(12.34 + 'abc'); // '12.34abc'
 String('abc' + 12.34); // 'abc12.34'
 String(undefined); // 'undefined'
 String(null); // 'null'
+String(["a", "b"]) // 'a,b' ( => ["a", "b"].join()과 같다.)
 ```
 
 ## toString  
