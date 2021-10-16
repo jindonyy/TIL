@@ -1,5 +1,5 @@
 ---
-title: "정수인지 판별하기(isInteger)"
+title: "정수인지 판별하기(isInteger) (IE❌)"
 layout: single
 classes: wide
 categories:
@@ -19,7 +19,7 @@ date: 2021-10-13
 * value가 정수인지 아닌지 판별하여 boolean값으로 반환한다.
 * 문법: Number.isInteger(value)
 * value가 NaN이나 Infinity인 경우 false를 반환한다.
-* **IE에선 작동하지 않는다.** (한국에선 아직 사용하기 이른것인가..)
+* **IE에서 작동하지 않는다.** (한국에선 아직 사용하기 이른것인가..)
 
 ```javascript
 // parseInt를 사용한 방식
