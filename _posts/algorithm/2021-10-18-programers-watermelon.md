@@ -1,6 +1,5 @@
 ---
-title: "<span>프로그래머스</span><span>Lv1</span> 수박수박수박수박수박수?
-"
+title: "<span>프로그래머스</span><span>Lv1</span> 수박수박수박수박수박수?"
 layout: single
 classes: wide
 categories:

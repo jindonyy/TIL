@@ -1,7 +1,5 @@
 ---
-title: "<span>프로그래머스</span><span>Lv1</span> 문자열을 정수로 바꾸기
-
-"
+title: "<span>프로그래머스</span><span>Lv1</span> 문자열을 정수로 바꾸기"
 layout: single
 classes: wide
 categories:
