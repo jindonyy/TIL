@@ -50,20 +50,43 @@ console.log(obj === copyObj); // true
 
 ## 객체의 깊은 복사
 객체의 원본을 그대로 유지하고 복사하여 수정하고 싶을 때는 어떻게 해야할까?
+
+### slice
+* 문법: array.slice(start[, end])
+* 배열열의 start부터 end 전까지 배열의 부분 새로운 문자열을 반환해주는 메서드이다. <u>객체가 아닌 배열의 복사만 사용할 수 있다.</u>
+* 그러나 slice를 활용한 복사는 완벽한 깊은 복사가 아니다. 배열 안의 배열인 2중 배열일 경우, *안의 하위 배열까지는 깊은 복사가 이루어지지 않는다.*
+
+```javascript
+var arr = [1, 2, 3, 4];
+var copyArr = arr.slice();
+console.log(arr === copyArr); // false
+
+copyArr[0] = 0;
+console.log(arr); // [1, 2, 3, 4]
+
+// 2중 배열
+var arr = [[1, 2], [3, 4]];
+var copyArr = arr.slice();
+console.log(arr[0]=== copyArr[0]); // true
+
+copyArr[0][0] = 'a';
+console.log(arr); // [['a', 2], [3, 4]]
+```
+
 ### assign
 * 문법: Object.assign(target, ...sources)
 * 깊은 복사를 위해서는 메서드의 첫번째 인수로 빈 객체를 넣어주며, 두번째 인수로 할당할 객체를 넣으면 된다.
-* 그러나 Object.assign()를 활용한 복사는 완벽한 깊은 복사가 아니다. 객체 안의 객체인 2중 객체일 경우, *안의 하위 객체까지는 깊은 복사가 이루어지지 않는다.*
+* 그러나 Object.assign()를 활용한 복사 또한 완벽한 깊은 복사가 아니다. 객체 안의 객체인 2중 객체일 경우, *안의 하위 객체까지는 깊은 복사가 이루어지지 않는다.*
 
 ```javascript
 var obj = {
   a: 1
 };
 var copyObj = Object.assign({}, obj);
+console.log(obj === copyObj); // false
 
 copyObj.a = 2;
-console.log(obj); // { a: 1 }
-console.log(obj === copyObj); // false
+console.log(obj); // {a: 1}
 
 // 2중 객체
 var obj = {
@@ -73,10 +96,10 @@ var obj = {
   },
 };
 var copyObj = Object.assign({}, obj);
+console.log(obj.b === copyObj.b); // true
 
 copyObj.b.c = 3;
-console.log(obj); // { a: 1, b: { c: 3 } }
-console.log(obj.b.c === copyObj.b.c); // true
+console.log(obj); // {a: 1, b: {c: 3}}
 ```
 
 ### 전개 연산자(Spread Operator)
@@ -92,10 +115,10 @@ var obj = {
   };
   
 var copyObj = { ...obj };
-copyObj.b.c = 3;
+console.log(obj.b === copyObj.b); // true
 
-console.log(obj); // { a: 1, b: { c: 3 } }
-console.log(obj.b.c === copyObj.b.c); // true
+copyObj.b.c = 3;
+console.log(obj); // {a: 1, b: {c: 3}}
 ```
 
 ### JSON 객체 메소드
@@ -115,8 +138,8 @@ var obj = {
   },
 };
 var copyObj = JSON.parse(JSON.stringify(obj));
+console.log(obj.b === copyObj.b); // false
 
 copyObj.b.c = 3;
-console.log(obj); // { a: 1, b: { c: 2 } }
-console.log(obj.b.c === copyObj.b.c); // false
+console.log(obj); // {a: 1, b: {c: 2}}
 ```
