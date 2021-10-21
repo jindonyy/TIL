@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [js number, number, ceil, floor, round, parseInt]
+  - [js number, number, Math, Math.ceil, Math.floor, Math.round, parseInt]
 date: 2021-10-12
 ---
 
@@ -17,7 +17,7 @@ x = 10000, n = 3 값이 입력됐을 때, 10000 / 3 = 3333.33333... 이다.
 
 ## ceil
 * x가 정수가 아닌 경우 **올림**하여 반환해주는 함수이다.
-* 문법: Math.floor(x)
+* 문법: Math.ceil(x)
 * x가 type이 string인 숫자의 경우 올림하여 type이 Number인 숫자로 반환하지만, 문자가 들어있을 경우엔 NaN을 반환한다.
 * 빈문자열인 경우나 공백만 있을 경우, false로 인식하여 0을 반환한다.
 * 숫자 앞 뒤에 공백이 있을 경우, 공백을 제거한 뒤 숫자로 반환한다.
