@@ -405,16 +405,20 @@ div.highlighter-rouge>pre, div.highlighter-rouge pre.highlight, figure.highlight
   font-weight: bold;
   font-style: italic;
 }
-.highlight .k, .highlight .kd, .highlight .kv {
+.highlight .k {
   color: #b2fd6d;
   font-weight: bold;
 }
+.highlight .kd, .highlight .kv {
+  color: #29b0ff;
+  font-weight: bold;
+}
 .highlight .o, .highlight .ow {
-  color: #4df4ff;
+  color: #9fe4e9;
   font-weight: bold;
 }
 .highlight .p, .highlight .pi {
-  color: #4df4ff;
+  color: #9fe4e9;
 }
 .highlight .gd {
   color: #cc0000;
@@ -509,22 +513,23 @@ div.highlighter-rouge>pre, div.highlighter-rouge pre.highlight, figure.highlight
   font-weight: bold;
 }
 .highlight .sa {
-  color: #b2fd6d;
+  color: #29b0ff;
   font-weight: bold;
 }
 .highlight .se {
-  color: #4df4ff;
+  color: #9fe4e9;
   font-weight: bold;
 }
 .highlight .sc {
-  color: #4df4ff;
+  color: #9fe4e9;
   font-weight: bold;
 }
 .highlight .si {
-  color: #4df4ff;
+  color: #9fe4e9;
   font-weight: bold;
 }
 .highlight .nb {
+  color: #0bdba1;
   font-weight: bold;
 }
 .highlight .ni {
