@@ -69,6 +69,7 @@ function solution(array, commands) {
 }
 ```
 
+#### 다른 사람 풀이
 ```javascript
 function solution(array, commands) {
   return commands.map(v => {
