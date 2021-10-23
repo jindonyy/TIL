@@ -6,7 +6,7 @@ categories:
   - algorithm
 tags:
   - [javascript, algorithm, programers, Level1]
-date: 2021-10-23
+date: 2021-10-24
 ---
 
 ## 문제 설명
@@ -26,8 +26,27 @@ date: 2021-10-23
 ## 답안
 #### 나의 풀이
 ```javascript
-
+function solution(a, b) {
+    var date = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+	var day = ["FRI", "SAT", "SUN", "MON", "TUE", "WED", "THU"];
+    var sumDate = b;
+    
+    for(var i = 0; i < a-1; i++) {
+        sumDate += date[i];
+    }
+    
+    return day[(sumDate-1) % 7];
+}
 ```
+
+```javascript
+function solution(a, b) {
+    return String(new Date(`${a} ${b}, 2016`)).slice(0, 3).toUpperCase();
+}
+```
+new Date도 사용해보았다.  
+역시 노가다가 아니라 간편하긴 하나 느리다.  
+둘 다 짜보는게 알고리즘 공부와 메서드 공부 둘 다 될 듯 하다.
 
 
 #### 옛날 풀이
@@ -47,3 +66,13 @@ function solution(a, b) {
     return answer;
 }
 ```
+
+#### 다른 사람 풀이
+```javascript
+function getDayName(a,b){
+    var date = new Date(2016, (a - 1), b);
+    return date.toString().slice(0, 3).toUpperCase();
+}
+```
+백틱 안쓰고 저렇게 쓸 수도 있구나..  
+Date도 정리를 좀 해놔야겠다.
