@@ -11,7 +11,7 @@ date: 2021-10-20
 
 아스키코드란?  
 -미국정보교환표준부호(영어: American Standard Code for Information Interchange), 또는 줄여서 ASCII( /ˈæski/, 아스키)는 영문 알파벳을 사용하는 대표적인 문자 인코딩이다.
-<img src='{{ "/assets/images/2021-10-20-post-img1.png" | relative_url }}' title="아스키코드 표" alt="아스키코드 표"/> 
+<img src="../../assets/images/2021-10-20-post-img1.png" title="아스키코드 표" alt="아스키코드 표"/> 
 
 ## charCodeAt
 * 문자열 중 지정한 인덱스의 문자를 아스키코드 번호로 반환해주는 메서드이다.
