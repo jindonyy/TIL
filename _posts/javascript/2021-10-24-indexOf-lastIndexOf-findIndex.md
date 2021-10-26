@@ -1,5 +1,5 @@
 ---
-title: "배열의 요소 위치 가져오기(indexOf, lastIndexOf, findIndex)"
+title: "배열의 요소 위치 가져오기(indexOf, lastIndexOf, findIndex(IE❌))"
 layout: single
 classes: wide
 categories:
@@ -67,6 +67,7 @@ console.log(indices); // [4, 2, 0]
   * array: findIndex 함수가 호출된 배열이다.
   * thisArg: 콜백을 실행할 때 this로 사용할 객체이다. 
 * callback의 조건에 맞는 최초의 요소를 찾으면 해당 요소의 위치를, 찾지 못하면 -1을 반환하고 즉시 종료된다.
+* **IE에서 작동하지 않는다.**
 
 ```javascript
 var arr = [1, 5, 6, 3, 4, 7];
