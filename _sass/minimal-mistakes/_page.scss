@@ -98,7 +98,7 @@ body {
         margin: 0.8em 0;
       }
 
-      *:last-child {
+      > *:last-child {
         margin-bottom: 0;
       }
     }
