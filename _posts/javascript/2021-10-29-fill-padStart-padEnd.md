@@ -1,5 +1,5 @@
 ---
-title: "문자열 추가하기(padStart, padEnd) (IE❌)"
+title: "문자열 추가하기(padStart, padEnd)"
 layout: single
 classes: wide
 categories:

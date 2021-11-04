@@ -1,5 +1,5 @@
 ---
-title: "정수인지 판별하기(isInteger) (IE❌)"
+title: "정수인지 판별하기(isInteger)"
 layout: single
 classes: wide
 categories:

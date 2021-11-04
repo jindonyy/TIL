@@ -1,5 +1,5 @@
 ---
-title: "조건에 맞는 배열의 요소 찾기(find(IE❌), filter)"
+title: "조건에 맞는 배열의 요소 찾기(find, filter)"
 layout: single
 classes: wide
 categories:

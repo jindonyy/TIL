@@ -1,5 +1,5 @@
 ---
-title: "배열의 요소 위치 가져오기(indexOf, lastIndexOf, findIndex(IE❌))"
+title: "배열의 요소 위치 가져오기(indexOf, lastIndexOf, findIndex)"
 layout: single
 classes: wide
 categories:
