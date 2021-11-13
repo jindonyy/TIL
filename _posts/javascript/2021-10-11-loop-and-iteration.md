@@ -75,11 +75,11 @@ for (let i in obj) {
 
 let arr = [1, 2, 3];
 for (let i in arr) {
-  console.log(i);
+  console.log(i, arr[i]);
 }
-// 1
-// 2
-// 3
+// 0 1
+// 1 2
+// 2 3
 ```
 
 ## while
