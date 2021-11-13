@@ -42,25 +42,21 @@ date: 2021-10-24
 #### 나의 풀이
 ```javascript
 function solution(board, moves) {
-    var answer = 0;
-    var basket = [];
+    let answer = 0;
+    const basket = [];
     
-    for(var i = 0, len = moves.length; i < len; i++) {
-        var el = moves[i]-1;
+    for(let i = 0, len = moves.length; i < len; i++) {
+        const el1 = moves[i]-1;
         for(var j = 0, len2 = board.length; j < len2; j++) {
-            if(board[j][el] != 0) {
-                basket.push(board[j][el]);
-                board[j][el] = 0;
+            const el2 = board[j][el1];
+            if(el2 !== 0) {
+                if(basket[basket.length-1] === el2) {
+                    basket.pop();
+                    answer += 2;
+                } else basket.push(el2);
+                board[j][el1] = 0;
                 break;
             }
-        }
-    }
-    
-    for(let k = 1; k < basket.length; k++){
-        if(basket[k-1] === basket[k]){
-            answer += 2;
-            basket.splice(k-1, 2);
-            k-=2;
         }
     }
 
@@ -125,30 +121,3 @@ const solution = (board, moves) => {
     return result;
 };
 ```
-
-```javascript
-function solution(board, moves) {
-    var count =0;
-    var stack = [];
-
-    for(var i=0;i<moves.length;i++){
-        var now = moves[i]-1
-        for(var j=0;j<board.length;j++){
-            if(board[j][now]!=0){
-                if(stack[stack.length-1]===board[j][now]){
-                    stack.pop();
-                    count+=2;
-                }
-                else{
-                    stack.push(board[j][now])
-                }
-                board[j][now] = 0;
-                break;
-            }
-        }
-    }
-
-    return count;
-}
-```
-마지막에 for문을 한번 더 돌지 않고 if문으로 이전 요소와 같지 않을 때만 push하도록 하였다.
