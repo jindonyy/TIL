@@ -189,7 +189,6 @@ function printAllPairs(n) {
 <img src='{{ "/assets/images/2021-12-04-post-img4.png" | relative_url }}' style="width:550px;" /> 
 [Big O 표기법 그래프]
   
-[https://rithmschool.github.io/function-timer-demo/](Big O 예제 그래프 ㅣ사이트)
-<!-- 
-## 알고리즘이란?
+[https://rithmschool.github.io/function-timer-demo/](Big O 예제 그래프 ㅣ사이트)  
+<!-- ## 알고리즘이란?
 컴퓨터 공학과 데이터 구조에 대한 것 -->
