@@ -17,6 +17,7 @@ date: 2021-12-08
   * thisArg: func 호출에 제공되는 this의 값
   * arg1, arg2, ...: func에 호출되어야 하는 인수
 * this 와 arguments 를 매개로 호출된 함수의 결과를 반환한다.
+
 ```javascript
 var member1 = {
   id: "jenny",
@@ -41,6 +42,7 @@ member1.favorite.call(member2, "lose", "sandwitch"); // lose와 jisu는 sandwitc
     * 함수에 제공된 인수가 없을 경우 null 또는 undefined이다.
 * this 와 arguments 를 매개로 호출된 함수의 결과를 반환한다.
 * call()과 다르게 apply()는 두 번째 매개변수를 배열 형태로 넣게된다는 차이점이 있다.(유사 배열)
+
 ```javascript
 var member1 = {
   id: "jenny",
@@ -62,6 +64,7 @@ member1.favorite.apply(member2, ["lose", "sandwitch"]); // lose와 jisu는 sandw
   * thisArg: 바인딩 함수가 타겟 함수의 this에 전달하는 값
   * arg1, arg2, ...: func에 호출되어야 하는 인수
 * bind()는 새롭게 바인딩한 함수를 만든다. 바인딩한 함수는 원본 함수 객체를 감싸는 함수이다. 쉽게 말해 bind()는 call(), apply()와 같이 함수가 가리키고 있는 this를 바꾸지만 **호출되지는 않는다**. 즉, call(this, 1, 2, 3)은 bind(this)(1, 2, 3)과 같다는 말이다.
+
 ```javascript
 var member1 = {
   id: "jenny",
