@@ -16,7 +16,7 @@ Big O 표기법은 이런 질문에 관한 것이다.
 지진 강도를 나타낼 때, 강한 지진이란 표현이 아니라 7.2지진, 9.4지진 등과 같이 표현하는 것처럼 Big O 표기법도 코드의 일반화를 통해 애매한 측량을 정형화한 방법이다.  
 알고리즘에 입력값이 커짐에 따라 실행 시간이 늘어나는 정도를 정리해서 알려주는 것이다.
 
-## 코드에서 더 나은 기준은?
+### 코드에서 더 나은 기준은?
 * 속도는 빠른가?
 * 메모리를 얼마나 사용하는가?
 * 가독성이 좋은가?
@@ -190,5 +190,36 @@ function printAllPairs(n) {
 [Big O 표기법 그래프]
   
 [https://rithmschool.github.io/function-timer-demo/](Big O 예제 그래프 ㅣ사이트)  
-<!-- ## 알고리즘이란?
-컴퓨터 공학과 데이터 구조에 대한 것 -->
+
+## 공간 복잡도
+* O(1)
+  * number, boolean, undefined, null 등 stirng을 제외한 원시값
+  * number는 1을 할당하든 1000을 할당하든 차지하는 공간은 같다. 때문에 위의 타입들은 공간복잡도가 O(1)이다.
+* O(n)
+  * stirng과 array, object 같은 참조값
+  * string은 원시값이지만 문자열의 길이에 따라, array는 배열의 길이에 따라, object는 키의 갯수에 따라 O(n)이 된다.
+
+```javascript
+function sum(arr) {
+  let total = 0;
+  for (let i = 0; i < arr.length; i++) {
+    total += arr[i];
+  }
+  return total;
+}
+```
+위의 함수를 보면 total과 i 두가지 number가 있으므로 이 함수의 공간 복잡도만을 봤을 때는 O(2)이다.  
+즉 O(1)이 되는 것이다.
+
+```javascript
+function double(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(2 * arr[i]);
+  }
+  return newArr;
+}
+```
+다른 함수를 보면 array인 newArr이 있고, for문에 따라 배열의 길이가 늘어나게 되므로, 이 함수의 공간 복잡도는 O(n)이 된다.  
+  
+시간 복잡도만을 봤을 때는 둘 다 O(n)이지만, 공간 복잡도로 봤을 때는 sum함수가 복잡도가 낫게 되는 것이다.
