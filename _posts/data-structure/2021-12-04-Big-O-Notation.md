@@ -120,7 +120,7 @@ function addUpTo(n) {
 n이 증가함에 따라 컴퓨터가 해야 하는 간단한 연산의 수가 결국 상수 곱하기 f(n)보다 작으면 알고리즘은 O(f(n)라고 한다.  
 * f(n)는 상수일 수 있다. (f(n) = 1) => O(1)
 * f(n)는 선형일 수 있다. (f(n) = n) => O(n)
-* f(n)는 (f(n) = n)의 제곱일 수 있다. => O(n의 제곱)
+* f(n)는 (f(n) = n)²일 수 있다. => O(n²)
 * f(n)는 완전히 다른 것일 수 있다.
 
 #### O(1)
@@ -165,7 +165,7 @@ function countUpAndDown(n) {
 ```
 위의 코드 또한 O(n)+O(n)인 O(2n)이지만 일직선으로 증가하는 것은 같기 때문에 크게 O(n)으로 표기할 수 있다.
 
-#### O(n의 제곱)
+#### O(n²)
 ```javascript
 function printAllPairs(n) {
   for (var i = 0; i < n; i++) {
@@ -175,7 +175,7 @@ function printAllPairs(n) {
   }
 }
 ```
-이중 for문일 경우 O(n) 안에 O(n)이 있으므로 O(n * n)이다. 즉 O(n의 제곱)인 것이다.  
+이중 for문일 경우 O(n) 안에 O(n)이 있으므로 O(n * n)이다. 즉 O(n²)인 것이다.  
 
 #### Big O 표기법 규칙
 1. 상수는 고려하지 않는다.  
