@@ -97,9 +97,13 @@ fieldset {
   widows: 3;
 }
 ul {
+  margin: 0;
+  padding: 0;
   padding-inline-start: 1em;
 }
 ol {
+  margin: 0;
+  padding: 0;
   padding-inline-start: 1.2em;
 }
 
@@ -312,7 +316,6 @@ svg:not(:root) {
 
 nav {
   ul {
-    margin: 0;
     padding: 0;
   }
 

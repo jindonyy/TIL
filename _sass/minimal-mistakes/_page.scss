@@ -53,7 +53,7 @@ body {
   
   .page__inner-wrap {
     float: left;
-    margin: 2.5em 0 0;
+    margin: 3.5em 0 0;
     width: 100%;
     clear: both;
     
@@ -90,7 +90,7 @@ body {
       }
 
       a {
-        color: #0052e9;
+        color: #118f6b;
       }
 
       img {
@@ -161,6 +161,11 @@ body {
   li,
   dl {
     font-size: 1em;
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1.3em;
   }
 
   li {
