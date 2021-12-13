@@ -46,7 +46,7 @@ date: 2021-12-12
 숫자도 문자열로 바뀌었기 때문에 앞의 한글자씩 비교를 하게 되므로 1이 앞글자인 10과 15가 먼저 오게되는 것이다.  
   
 이런 문제를 없애기 위해 sort안에 callback 함수를 넣어주어야 한다.  
-콜백 함수에는 두 가지 인자를 넣을 수 있다. 흔히들 a, b로 많이 넣는다.  
+콜백 함수에는 두 가지 매개 변수를 넣을 수 있다. 흔히들 a, b로 많이 넣는다.  
 sort는 음수 값이 return 되면, a가 b보다 먼저 오도록 한다.  
 반대로 양수 값이 return 되면 b가 a보다 먼저 오도록, 0이 return 되면 a와 b를 같은 값으로 정렬하게 된다.
 ```javascript
@@ -64,3 +64,27 @@ function compareByLen(str1, str2) {
 [ "Steele", "Colt", "Data Structures", "Algorithms" ].sort(compareByLen);
 // [ "Colt", "Steele", "Algorithms", "Data Structures" ]
 ```
+
+## 정렬하기 전, swap 하기
+내장 메서드인 sort가 아닌 정렬 알고리즘의 종류들을 다음 포스트들에서 다룰 건데,  
+해당 정렬들을 하기 전에 swap 기능을 먼저 이해해야 한다.  
+많은 정렬 알고리즘은 특정 유형의 스와핑 기능(예를 들어 숫자로 스와핑하여 순서대로 배열)을 포함한다.  
+```javascript
+// ES5
+function swap(arr, idx1, idx2) {
+  var temp = arr[idx1];
+  arr[idx1] = arr[idx2];
+  arr[idx2] = temp;
+}
+```
+swap라 적으니 어려워보이지만 말그대로 두가지 항목을 정렬을 위해 바꾸어 주는 것이다.  
+전체 배열과 바꾸어주려는 두 인덱스를 매개 변수로 받고 두 위치를 바꾸어준다.
+```javascript
+// ES2015
+const swap = (arr, idx1, idx2) => {
+  [arr[idx1],arr[idx2]] = [arr[idx2],arr[idx1]];
+}
+```
+ES2015로 넘어오면서 구조 분해 할당 기능이 추가 되었다.  
+해당 기능은 아래의 사이트를 참고하자.  
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)
