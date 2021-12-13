@@ -14,7 +14,7 @@ body {
   padding: 0;
   color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.65;
+  line-height: 1.75;
   letter-spacing: 0.015rem;
   background: #e8eaef;
 
@@ -205,12 +205,12 @@ hr {
 
 ul li,
 ol li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.2em;
 }
 
 li ul,
 li ol {
-  margin-top: 0.5em;
+  margin-top: 0.2em;
 }
 
 /*
