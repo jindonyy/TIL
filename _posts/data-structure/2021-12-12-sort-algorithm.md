@@ -64,27 +64,3 @@ function compareByLen(str1, str2) {
 [ "Steele", "Colt", "Data Structures", "Algorithms" ].sort(compareByLen);
 // [ "Colt", "Steele", "Algorithms", "Data Structures" ]
 ```
-
-## 정렬하기 전, swap 하기
-내장 메서드인 sort가 아닌 정렬 알고리즘의 종류들을 다음 포스트들에서 다룰 건데,  
-해당 정렬들을 하기 전에 swap 기능을 먼저 이해해야 한다.  
-많은 정렬 알고리즘은 특정 유형의 스와핑 기능(예를 들어 숫자로 스와핑하여 순서대로 배열)을 포함한다.  
-```javascript
-// ES5
-function swap(arr, idx1, idx2) {
-  var temp = arr[idx1];
-  arr[idx1] = arr[idx2];
-  arr[idx2] = temp;
-}
-```
-swap라 적으니 어려워보이지만 말그대로 두가지 항목을 정렬을 위해 바꾸어 주는 것이다.  
-전체 배열과 바꾸어주려는 두 인덱스를 매개 변수로 받고 두 위치를 바꾸어준다.
-```javascript
-// ES2015
-const swap = (arr, idx1, idx2) => {
-  [arr[idx1],arr[idx2]] = [arr[idx2],arr[idx1]];
-}
-```
-ES2015로 넘어오면서 구조 분해 할당 기능이 추가 되었다.  
-해당 기능은 아래의 사이트를 참고하자.  
-[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)
