@@ -17,14 +17,14 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 # Site Settings
 locale                   : "en-US"
 title                    : "코딩은 어려워🤣"
-title_separator          : "Coding is difficult but interesting."
+title_separator          : "FE로 성장 중 👶🏻🍼"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Dony"
 description              : "Today I Learned!"
 url                      : "https://jindonyy.github.io/TIL"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"~
 logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Dony :)"
   avatar           : "/assets/images/profile.jpg"
-  bio              : "Coding is difficult but interesting."
+  bio              : "FE로 성장 중 👶🏻🍼"
   location         : "Seoul"
   email            :
   links:
