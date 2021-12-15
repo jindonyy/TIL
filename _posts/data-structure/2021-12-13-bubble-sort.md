@@ -16,24 +16,6 @@ date: 2021-12-13
 (오름차순 기준)
 * 순회하면서 큰 값이 맨 뒤로 가는 형태라 계속 반복하여 부풀어 오른다하여 버블 정렬이라 한다.  
 * 해당 요소와 뒤의 요소를 하나씩 비교해가며 큰 값이 뒤로 가도록 바꾸어주고, 다 회전한 다음 다시 처음부터 회전을 반복하여 전체 요소가 정렬 순서에 맞을 때까지 반복하는 방식이다.  
-   
-정렬 알고리즘 예시 시각화 사이트: [https://visualgo.net/en/sorting](https://visualgo.net/en/sorting)  
-<img src='{{ "/assets/images/2021-12-13-post-img1.png" | relative_url }}' style="width:500px;" title="버블 정렬 설명 이미지" alt="버블 정렬 설명 이미지"/> 
-<p style="margin-bottom: 0.2em;">위의 예시 이미지를 보면 </p> 
-1. 5와 3을 비교하여 바꾼다.  
-2. 5와 4를 비교하여 바꾼다.  
-3. 5와 1을 비교하여 바꾼다.  
-4. 5와 2를 비교하여 바꾼다.  
-
-왜냐하면 5가 이 배열에서 가장 큰 수라서 마지막에 위치해야 하기 때문이다.  
-이게 한 번 순회하는 과정이다.  
-그러면 이걸 얼마나 반복해야 할까?  
-처음에는 배열에 있는 모든 요소에 대해 반복해야 할 수 있다.    
-하지만 뒤에 요소들을 계속 배치하면서 이 값이 줄어들게 될 것이다. 그 다음 순환에서는 4개, 그 다음은 3개 ...  
-즉, 한번 순회할 때 마다 큰 요소들이 뒤에서 하나씩 쌓이게 되는 것이다.  
-지금은 제일 큰 5가 제일 뒤에 있고, 그 다음 순회 때는 다음으로 큰 4가 5의 앞에 가고... 이 과정을 반복하는 것이다.  
-그러면 앞으로 갈 수록 더 적은 요소들만 확인하면 된다.  
-루프에도 이걸 적용할 수 있다.  
 
 ## 정렬하기 전, swap 하기
 우선 정렬을 하기 전에 swap 기능(자리 바꾸기)을 먼저 이해해야 한다.  
@@ -62,6 +44,32 @@ ES2015로 넘어오면서 구조 분해 할당 기능이 추가 되었다.
 해당 기능은 아래의 사이트를 참고하자.  
 [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring)
 
+## 정렬 방법
+1. 현재 index의 요소와 다음 index의 요소를 비교한다.
+2. 해당 index의 요소가 더 크다면 자리를 바꾸어주고 아니면 넘어간다.
+3. 내부 for문의 index가 증가하면서 현재 index가 다음 index, 다음 index가 다다음 index가 되기 때문에 둘을 비교한다.
+4. 해당 index의 요소가 더 크다면 자리를 바꾸어주고 아니면 넘어간다.
+5. 모두 정렬될 때까지 반복한다.
+정렬 알고리즘 예시 시각화 사이트: [https://visualgo.net/en/sorting](https://visualgo.net/en/sorting) 
+
+#### < 예시 >
+<img src='{{ "/assets/images/2021-12-13-post-img1.png" | relative_url }}' style="width:500px;" title="버블 정렬 설명 이미지" alt="버블 정렬 설명 이미지"/> 
+<p style="margin-bottom: 0.2em;">위의 예시 이미지를 보면 </p> 
+1. 5와 3을 비교하여 바꾼다.  
+2. 5와 4를 비교하여 바꾼다.  
+3. 5와 1을 비교하여 바꾼다.  
+4. 5와 2를 비교하여 바꾼다.  
+
+5가 이 배열에서 가장 큰 수라서 마지막에 위치해야 하기 때문이다.  
+이게 한 번 순회하는 과정이다.  
+그러면 이걸 얼마나 반복해야 할까?  
+처음에는 배열에 있는 모든 요소에 대해 반복해야 할 수 있다.    
+하지만 뒤에 요소들을 계속 배치하면서 이 값이 줄어들게 될 것이다. 그 다음 순환에서는 4개, 그 다음은 3개 ...  
+즉, 한번 순회할 때 마다 큰 요소들이 뒤에서 하나씩 쌓이게 되는 것이다.  
+지금은 제일 큰 5가 제일 뒤에 있고, 그 다음 순회 때는 다음으로 큰 4가 5의 앞에 가고... 이 과정을 반복하는 것이다.  
+그러면 앞으로 갈 수록 더 적은 요소들만 확인하면 된다.  
+루프에도 이걸 적용할 수 있다.  
+
 ## 버블 정렬 구현
 그럼 이제 버블 정렬을 구현해보자. 
 
@@ -71,10 +79,28 @@ function bubbleSort(arr) {
   for(let i = 0; i < arr.length; i++) {
     for(let j = 0; j < arr.length; j++) {
       console.log(arr, arr[j], arr[j + 1]);
-      if(arr[j] > arr[j+1]) {
+      if(arr[j] > arr[j+1]) { // 해당 요소와 다음 요소를 비교하여 자리를 바꾸어 준다.
         let temp = arr[j];
         arr[j] = arr[j+1];
         arr[j+1] = temp;
+      }
+    }
+    
+    console.log('=================================');
+  }
+
+  return arr;
+}
+
+bubbleSort([37, 29, 8, 45]);
+
+// ES2015
+function bubbleSort(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    for(let j = 0; j < arr.length; j++) {
+      console.log(arr, arr[j], arr[j + 1]);
+      if(arr[j] > arr[j+1]) {
+        [arr[j], arr[j+1]] = [arr[j+1], arr[j]];
       }
     }
     
@@ -114,28 +140,10 @@ bubbleSort([37, 29, 8, 45]);
 ### 최적화 1: 반복문 범위 좁히기
 ```javascript
 function bubbleSort(arr) {
-  for(let i = arr.length; i > 0; i--) { // 배열의 끝에서 부터 반복문을 시작
-    for(let j = 0; j < i - 1; j++) { // j를 i-1보다 보다 작을 때까지 순회하도록
-      console.log(arr, arr[j], arr[j + 1]);
-      if(arr[j] > arr[j+1]) {
-        let temp = arr[j];
-        arr[j] = arr[j+1];
-        arr[j+1] = temp;
-      }
-    }
-
-    console.log('=================================');
-  }
-
-  return arr;
-}
-
-bubbleSort([37, 29, 8, 45]);
-
-// ES2015
-function bubbleSort(arr) {
   for(let i = arr.length; i > 0; i--) {
+  // 순회할 때마다 끝은 큰 숫자가 가게 되므로 끝에서부터 하나씩 줄어든 범위로 순회
     for(let j = 0; j < i - 1; j++) {
+    // i - 1까지 돌아 undefined와 비교하지 않도록
       console.log(arr, arr[j], arr[j + 1]);
 
       if(arr[j] > arr[j+1]) {
@@ -161,8 +169,7 @@ function bubbleSort(arr) {
 // =================================
 // =================================
 ```
-앞선 코드의 문제점을 통한 두 개의 개선 사항 있다.  
-이 개선들을 통해 맨 끝의 요소가 젤 큰 요소이므로 해당 요소는 비교하지 않게 되고, 맨 끝의 요소가 undefined와 비교하지 않게 된다.  
+앞선 코드의 문제점을 개선한 코드이다.  
 하지만 해당 코드 또한 지난 순회에서 자리 바꾸기를 한 부분을 다시 탐색하고 있다. 이미 정렬이 끝난 상황에서도 끝까지 순회을 하는 것이다.
 
 ### 최적화 2: 이미 정렬한 부분인지 확인

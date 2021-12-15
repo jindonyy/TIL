@@ -15,14 +15,15 @@ date: 2021-12-14
 * 배열을 0개 또는 1개 요소의 더 작은 배열로 분해한 다음 새로 정렬된 배열을 구성하는 방식으로 작동한다.
 
 ## 합병 정렬 방법
-정렬 알고리즘 예시 시각화 사이트: [https://visualgo.net/en/sorting](https://visualgo.net/en/sorting)
-  
-<img src='{{ "/assets/images/2021-12-14-post-img2.png" | relative_url }}' style="width:550px;margin-top: 1.8em;" title="합병 정렬 설명" alt="합병 정렬 설명"/>
+<img src='{{ "/assets/images/2021-12-14-post-img2.png" | relative_url }}' style="width:600px;margin-top: 1.8em;" title="합병 정렬 설명" alt="합병 정렬 설명"/>
+
 1. 배열을 1/2 단위로 계속 나누어 각각 0개 또는 1개 요소의 배열이 되도록 한다.
 2. 나눈 2개의 배열을 각각 다시 합치는데 이때, 합친 뒤 정렬을 해준다.
 3. 정렬을 한 뒤 다시 합치고, 다시 정렬, 다시 합치기를 반복해준다.
+
+정렬 알고리즘 예시 시각화 사이트: [https://visualgo.net/en/sorting](https://visualgo.net/en/sorting)  
   
-여기서 합병 정렬에서 중요한 합병의 방법을 좀 더 자세히 알아보자.  
+구현하기 전에 합병 정렬에서 중요한 합병의 방법을 좀 더 자세히 알아보자.  
 
 ## 합병 방법
 앞서 보았듯이 합병 정렬을 구현하려면 먼저 두 정렬된 배열 합병을 담당하는 함수를 구현하는 것이 유용하다.  
@@ -128,14 +129,14 @@ mergeSort([1, 10, 50, 2, 14, 99, 100]]);
 그냥 배열을 다 나눈 다음에 다시 하나 하나 합병하기 때문에 입력값이 무엇인지와 관련없다.  
 이미 정렬이 되어있든, 반대로 정렬이 되어있든, 완전히 무작위이든!
 * 합병 정렬의 시간 복잡도는 **O(n log n)** 이다.
-<img src='{{ "/assets/images/2021-12-14-post-img4.png" | relative_url }}' style="width:600px;" title="합병 정렬 설명" alt="합병 정렬 설명"/>
+<img src='{{ "/assets/images/2021-12-14-post-img4.png" | relative_url }}' style="width:650px;" title="합병 정렬 설명" alt="합병 정렬 설명"/>
 전체 배열의 길이가 32인 배열을 합병 정렬한다고 생각해보자.  
 그럼 그 배열을 길이가 1 이하인 배열로 나누는데 걸리는 횟수는 4번이다. 즉 log 2인 것이다.  
 여기서 나누어준 배열을 merge 함수를 통해 n번씩 비교해주었다.  
 때문에 합병 정렬을 O(n log n)이 되는 것이다.
 <br>
 <br>
-<img src='{{ "/assets/images/2021-12-14-post-img5.png" | relative_url }}' style="width:600px;" title="시간 복잡도 그래프" alt="시간 복잡도 그래프"/>
+<img src='{{ "/assets/images/2021-12-14-post-img5.png" | relative_url }}' style="width:700px;" title="시간 복잡도 그래프" alt="시간 복잡도 그래프"/>
 위의 표를 보면 n log n은 n<sup>2</sup> 보다 훨씬 낫다.  
 데이터가 무엇인지 가리지 않는 정렬 알고리즘을 사용하는 경우라면 n log n이 최상이다.
 <br>

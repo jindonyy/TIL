@@ -20,20 +20,21 @@ date: 2021-12-13
 3. 더 작은 숫자를 찾으면 더 작은 숫자를 새로운 `최솟값`으로 지정하고 배열이 끝날 때까지 계속한다.
 4. `최솟값`이 처음에 시작했던 값이 아닌 경우 두 값을 바꾼다.
 5. 배열이 정렬될 때까지 다음 요소에서도 이 작업을 반복한다.
+
 정렬 알고리즘 예시 시각화 사이트: [https://visualgo.net/en/sorting](https://visualgo.net/en/sorting)
-  
+
+#### < 예시 >
 <img src='{{ "/assets/images/2021-12-13-post-img2.png" | relative_url }}' style="width:500px;" title="선택 정렬 설명 이미지" alt="선택 정렬 설명 이미지"/>   
 위의 예시 이미지를 보면  
 첫 번째 화살표는 지정한 시작점(내부 for문의 시작 index)이고, 두번 째 화살표는 비교 대상이다.  
 초록색 숫자는 순회하면서 현재 최솟값을 의미한다.  
+
 1. 초기 최솟값으로 되있는 5와 3을 비교한다.  
-3이 더 작다.  
-그러면 <strong style="color: green">3</strong>이 현재 최솟값이 된다.  
+3이 더 작다. 그러면 <strong style="color: green">3</strong>이 현재 최솟값이 된다.  
 2. 3과 4를 비교한다.  
 여전히 3이 더 작다.  
 3. 3과 1을 비교한다.  
-이번에는 1이 작다.  
-<strong style="color: green">1</strong>이 새로운 최솟값이 된다.  
+이번에는 1이 작다. <strong style="color: green">1</strong>이 새로운 최솟값이 된다.  
 4. 1과 2를 비교한다.  
 여전히 1이 더 작다.  
 5. 이제 마지막에 도착했으니 자리 바꾸기를 한다.  
