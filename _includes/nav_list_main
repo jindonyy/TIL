@@ -1,0 +1,45 @@
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+  <p class="all_post_num">
+    📂 <span>전체 글 수 <strong>{{sum}}</strong> 개</style> 
+  </p>
+  <!-- <ul class="nav__items" id="category_tag_menu">
+    <li>
+      <span class="nav__sub-title">Javascript</span>
+      <ul>
+        {% for category in site.categories %}
+          {% if category[0] == "Javascript" %}
+            <li><a href="/categories/javascript" class="">Javascript ({{category[1].size}})</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul>
+        {% for category in site.categories %}
+          {% if category[0] == "Algorithm" %}
+            <li><a href="/categories/algorithm" class="">알고리즘 풀이 ({{category[1].size}})</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul>
+        {% for category in site.categories %}
+          {% if category[0] == "Data-structure" %}
+            <li><a href="/categories/data-structure" class="">자료구조 ({{category[1].size}})</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+      <ul>
+        {% for category in site.categories %}
+          {% if category[0] == "Tool" %}
+            <li><a href="/categories/tool" class="">개발 Tool ({{category[1].size}})</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </li>	
+  </ul> -->
+  <div class="visitor">	
+    <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fjindonyy.github.io%2FTIL%2F&count_bg=%23868A89&title_bg=%233DC8A2&icon=&icon_color=%237C4B4B&title=visitor&edge_flat=false">
+  </div>
+</nav>

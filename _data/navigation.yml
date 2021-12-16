@@ -1,6 +1,4 @@
 # main links
 main:
-  - title: "Javascript"
-    url: /javascript/
-  - title: "Algorithm"
-    url: /algorithm/
+  - title: "Category"
+    url: /categories/

@@ -1,7 +1,7 @@
 ---
-title: "Javascript"
+title: "Category"
 layout: categories
-permalink: /javascript/
+permalink: /categories/
 author_profile: true
 sidebar_main: true
 ---

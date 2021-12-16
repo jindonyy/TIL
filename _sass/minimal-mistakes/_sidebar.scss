@@ -22,7 +22,7 @@
     // opacity: 0.75;
     -webkit-transition: opacity 0.2s ease-in-out;
     transition: opacity 0.2s ease-in-out;
-
+    padding-top: 3.5em;
     // &:hover {
     //   opacity: 1;
     // }
@@ -32,16 +32,18 @@
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      max-height: calc(100vh - #{$nav-height} - 2em);
+      height: calc(100vh - #{$nav-height} - 5em);
+      max-height: calc(100vh - #{$nav-height} - 12em);
     }
   }
 
   @include breakpoint($x-large) {
+    padding-top: 3em;
     width: calc(#{$right-sidebar-width} - 1em);
   }
 
-  > * {
-    margin-top: 3.5em;
+  .nav__list {
+    margin-top: 3em;
     margin-bottom: 1em;
   }
 
@@ -57,7 +59,7 @@
   p,
   li {
     font-family: $nanum-gothic;
-    font-size: 0.85em;
+    font-size: 0.9em;
     line-height: 1.5;
   }
 
@@ -67,6 +69,20 @@
     &.emoji {
       width: 20px;
       height: 20px;
+    }
+  }
+
+  .all_post_num {
+    margin-bottom: 1rem;
+  }
+  
+  .visitor {
+    position: absolute;
+    bottom: 1em;
+    left: 0;
+    img {
+      width: 80%;
+      max-width: 150px;
     }
   }
 }

@@ -16,13 +16,17 @@
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
     // padding-right: $right-sidebar-width;
+
+    .all_post_num {
+      margin: 3em 0 0;
+    }
   }
 
   .archive__item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
   }
 }
 
@@ -43,23 +47,24 @@
 }
 
 .archive__subtitle {
-  margin: -0.67em 0 1.3em;
+  margin: 0 0 1.3em;
   padding-bottom: 0.7em;
   font-size: $type-size-4;
-  color: $muted-text-color;
+  color: $text-color;
   border-bottom: 1px solid $border-color;
 }
 
 .archive__item-date {
   margin: 0;
   font-size: 0.8em;
-  color: $primary-color;
+  color: $muted-text-color;
 }
 
 .archive__item-title {
   margin: 0;
-  font-size: $h-size-3;
+  font-size: $h-size-4;
   font-family: $nanum-gothic;
+  font-weight: 400;
   line-height: initial;
   overflow: hidden;
   text-overflow: ellipsis;
