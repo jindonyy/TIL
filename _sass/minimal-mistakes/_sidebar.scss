@@ -53,12 +53,12 @@
   h5,
   h6 {
     margin-bottom: 0;
-    font-family: $nanum-gothic;
+    font-family: $IBM-plex-sans;
   }
 
   p,
   li {
-    font-family: $nanum-gothic;
+    font-family: $IBM-plex-sans;
     font-size: 0.9em;
     line-height: 1.5;
   }
@@ -211,7 +211,7 @@
   }
 }
 .sidebar .author__name {
-  font-family: $nanum-gothic;
+  font-family: $IBM-plex-sans;
   font-size: 1.4em;
 }
 
@@ -228,7 +228,7 @@
   position: relative;
   display: table-cell;
   vertical-align: middle;
-  font-family: $nanum-gothic;
+  font-family: $IBM-plex-sans;
   z-index: 20;
   cursor: pointer;
 

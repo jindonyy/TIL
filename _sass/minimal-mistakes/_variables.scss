@@ -17,7 +17,8 @@ $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
-$nanum-gothic: 'Nanum Gothic', sans-serif !default;
+// $nanum-gothic: 'Nanum Gothic', sans-serif !default;
+$IBM-plex-sans: 'IBM Plex Sans KR', sans-serif;
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
@@ -30,9 +31,9 @@ $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
 
-$global-font-family: $nanum-gothic !default;
-$header-font-family: $nanum-gothic !default;
-$caption-font-family: $nanum-gothic !default;
+$global-font-family: $IBM-plex-sans !default;
+$header-font-family: $IBM-plex-sans !default;
+$caption-font-family: $IBM-plex-sans !default;
 // $global-font-family: $sans-serif !default;
 // $header-font-family: $sans-serif !default;
 // $caption-font-family: $serif !default;
