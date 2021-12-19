@@ -32,8 +32,7 @@
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      height: calc(100vh - #{$nav-height} - 5em);
-      max-height: calc(100vh - #{$nav-height} - 12em);
+      height: calc(100vh - #{$nav-height} - 8vh);
     }
   }
 
@@ -78,7 +77,7 @@
   
   .visitor {
     position: absolute;
-    bottom: 1em;
+    bottom: 0;
     left: 0;
     img {
       width: 80%;
