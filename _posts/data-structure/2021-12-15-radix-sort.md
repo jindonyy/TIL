@@ -149,8 +149,8 @@ Math.floor(3.864807629026147) + 1 // 3 + 1 => 4
 function mostDigits(nums) {
   let maxDigits = 0;
 
-  for (let i = 0; i < nums.length; i++) {
-    maxDigits = Math.max(maxDigits, digitCount(nums[i]));
+  nums.forEach((num) => {
+    maxDigits = Math.max(maxDigits, digitCount(num));
   }
 
   return maxDigits;
@@ -174,8 +174,8 @@ function digitCount(num) { // num의 최고 자릿수를 반환
 function mostDigits(nums) { // nums 중에서 가장 큰 숫자의 최고 자릿수를 반환
   let maxDigits = 0;
 
-  for (let i = 0; i < nums.length; i++) {
-    maxDigits = Math.max(maxDigits, digitCount(nums[i]));
+  nums.forEach((num) => {
+    maxDigits = Math.max(maxDigits, digitCount(num));
   }
 
   return maxDigits;
@@ -189,11 +189,11 @@ function radixSort(nums) {
     // [ [], [], [], ... [] ] => length: 10
     let digitBuckets = Array.from({length: 10}, () => []);
 
-    for(let i = 0; i < nums.length; i++) { // nums 배열의 모든 숫자들을 순회
-      let digit = getDigit(nums[i], d); // nums[i]의 d번째 자릿수에 숫자를 저장
+    nums.forEach((num) => { // nums 배열의 모든 숫자들을 순회
+      let digit = getDigit(num, d); // num의 d번째 자릿수에 숫자를 저장
 
-      digitBuckets[digit].push(nums[i]); // 위에서 만든 bucket에 digit에 해당하는 배열에 nums[i]를 push
-    }
+      digitBuckets[digit].push(num); // 위에서 만든 bucket에 digit에 해당하는 배열에 num을 push
+    });
     console.log(...digitBuckets);
 
     nums = [].concat(...digitBuckets); // digitBuckets 안의 모든 배열들을 합쳐준다.
@@ -233,8 +233,8 @@ radixSort([23, 345, 5467, 12, 2345, 9852]);
   \- 모든 숫자들이 1자릿수인 경우 O(n)이 될 수 있다.
 * 공간복잡도: **O(d + n)**
 여기서 n은 우리가 정렬하려는 숫자의 갯수이고, d는 가장 큰 숫자의 최고 자릿수이다.  
-만약 엄청나게 긴 숫자가 포함되어 있다면 기수 정렬에서 고려해야할 큰 변수가 된다!
   
+만약 엄청나게 긴 숫자가 포함되어 있다면 기수 정렬에서 고려해야할 큰 변수가 된다!  
 때문에 기수 정렬의 시간복잡도는 아직도 논쟁 중인 부분이다.  
 평균 성능이 n log n 값을 가졌던 비교 정렬에 비해서 기수 정렬이 이론상으로는 더 빠를 수 있기 때문이다.  
 그러나 컴퓨터가 정보를 실제로 어떻게 저장하는지에 따라서 실제로는 그렇지 않을 수도 있으며, 비교 정렬과 비슷할 수도 있다.
