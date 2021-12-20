@@ -10,7 +10,7 @@
   @include clearfix();
   // @include breakpoint(max-width $large) {
   //   /* fix z-index order of follow links */
-  //   position: relative;
+    position: relative;
   //   z-index: 10;
   //   -webkit-transform: translate3d(0, 0, 0);
   //   transform: translate3d(0, 0, 0);
@@ -32,7 +32,7 @@
       /* calculate height of nav list
          viewport height - nav height - masthead x-padding
       */
-      height: calc(100vh - #{$nav-height} - 8vh);
+      // height: calc(100vh - #{$nav-height} - 8vh);
     }
   }
 
@@ -76,11 +76,9 @@
   }
   
   .visitor {
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    margin-top: 6em;
     img {
-      width: 80%;
+      width: 40%;
       max-width: 150px;
     }
   }
@@ -205,7 +203,7 @@
   margin: 0;
 
   @include breakpoint($large) {
-    margin-top: 25px;
+    margin-top: 35px;
     margin-bottom: 10px;
   }
 }
