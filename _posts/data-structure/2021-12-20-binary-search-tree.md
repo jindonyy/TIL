@@ -12,9 +12,9 @@ date: 2021-12-20
 ## 이진 트리란?
 * 이진 트리는 트리 구조 중에서 각 노드가 최대 2개의(0~2개) 자식을 가지는 트리 구조이다.  
 < 옳은 예시 >
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_1.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_1.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 < 틀린 예시 >
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_2.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_2.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 3개의 자식을 가지므로 이진 트리가 아닌 그냥 트리 구조
 
 * 순회가 쉽다는 장점이 있다.
@@ -23,9 +23,9 @@ date: 2021-12-20
 * 이진 트리에 속해 있는 이진 트리의 특별한 종류이다.
 * 이진 트리와 달리 <a herf="https://jindonyy.github.io/TIL/data%20structure/quick-sort/">퀵 소트</a>와 같이 작은 수가 왼쪽, 큰 수가 오른쪽으로 정렬되어 있다.  
 < 옳은 예시 >
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_3.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_3.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 < 틀린 예시 >
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_4.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_4.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 맨 아래의 4는 3보다 크므로 이진 탐색트리가 아닌 이진 트리이다.
 
 * 이진 탐색(binary search)과 연결 리스트(linked list)를 결합한 자료구조의 일종이다.
@@ -45,13 +45,13 @@ date: 2021-12-20
 * 정렬 기준에 맞는 위치에 노드를 추가해주는 메서드
 <ol>
   <li>추가할 새로운 노드를 만든다.
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_5.png" | relativec_url }}' style="width:450px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_5.png" | relativec_url }}' style="width:450px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
   </li>
   <li>루트에서 출발한다.
   <li>루트가 있는지 확인한다.</li>
   <li>루트가 없는 경우, 새 노드가 루트가 된다.</li>
   <li>루트가 있는 경우,
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_6.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_6.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
   </li>
     <ol>
       <li>새 노드의 값이 루트의 값보다 큰지 작은지 확인한다.</li>
@@ -199,11 +199,11 @@ tree.contains(30);
   * 최악의 경우가 트리의 높이 만큼 탐색하는 경우이다.  
   때문에 depth를 H라고 했을 때 시간복잡도를 **O(H)** 라고도 할 수 있다.
 
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_7.png" | relativec_url }}' style="width:700px;margin-top: 2rem;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_7.png" | relativec_url }}' style="width:700px;margin-top: 2rem;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 위의 이진 탐색 트리에서 65를 추가한다고 했을 때 오른쪽으로 3depth 만큼 내려가야 한다.
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_8.png" | relativec_url }}' style="width:750px;margin-top: 2rem;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_8.png" | relativec_url }}' style="width:750px;margin-top: 2rem;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 여기서 노드의 갯수가 두배로 늘어나 1depth가 추가됐을 경우 65는 4depth 만큼 내려가야 한다.
-<img src='{{ "/assets/images/2021-12-20-binary-search-tree_9.png" | relativec_url }}' style="width:500px;margin-top: 2rem;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_9.png" | relativec_url }}' style="width:500px;margin-top: 2rem;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 즉, 노드가 2배로 늘어날수록 가야하는 depth의 길이가 늘어가게 된다.  
 때문에 삽입의 <u>시간복잡도는 O(H)이고, O(H)는 O(log N)</u>과 같다.
 

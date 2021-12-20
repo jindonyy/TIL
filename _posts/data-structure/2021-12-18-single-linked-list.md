@@ -13,7 +13,7 @@ date: 2021-12-18
 * 데이터 요소를 선형적으로 연걸한 것이다.
 * 머리(head)와 꼬리(tail), 길이 특성을 포함하는 데이터 구조이다.
 * node로 구성되며, 각 node에는 value가 있고 다음 node 또는 null에 대한 포인터가 있다.
-<img src='{{ "/assets/images/2021-12-18-single-linked-list_1.png" | relativec_url }}' style="width:500px;" title="기수 정렬 설명" alt="기수 정렬 설명"/>
+<img src='{{ "/TIL/assets/images/2021-12-18-single-linked-list_1.png" | relativec_url }}' style="width:500px;" title="기수 정렬 설명" alt="기수 정렬 설명"/>
 
 ## 배열과의 차이점
 ### 연결 리스트

@@ -1,11 +1,11 @@
 ---
-title: "이중 연결 리스트(doubly linked list)"
+title: "스택과 큐(stacks and queques)"
 layout: single
 classes: wide
 categories:
   - data structure
 tags:
-  - [data structure, doubly linked list, linked list]
+  - [data structure, stack, queque]
 date: 2021-12-19
 ---
 
@@ -386,14 +386,15 @@ list.remove(2);
 ## 이중 연결리스트의 Big O
 * 접근
   * **O(N)** 
-  * 접근하고자하는 위치까지 찾아가야 한다.
+  \- 접근하고자하는 위치까지 찾아가야 한다.
 * 삽입
-  * **O(1)**
-  * push, unshift
+  * **O(1)** : push, unshift
 * 제거
-  * **O(1)**
-  * pop, shift, remove
+  * **O(1)** : pop, shift, remove
 * 탐색
   * **O(N)** : get, set  
-  * n의 값에 따라 head 또는 tail에서 탐색하기 때문에 정확히는 O(N/2)이지만, 간단히 O(N)이다.
-  * 그러나 단일 연결 리스트보다는 확실히 빠르다.
+  \- n의 값에 따라 head 또는 tail에서 탐색하기 때문에 정확히는 O(N/2)이지만, 간단히 O(N)이다.  
+  그러나 단일 연결 리스트보다는 확실히 빠르다.
+  
+## 결론
+단일 연결 리스트는 삽입과 삭제하는 부분에서는 배열보다 앞선다!
