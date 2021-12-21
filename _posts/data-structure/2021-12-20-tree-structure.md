@@ -78,7 +78,7 @@ ex) JSON
 * 인공 지능
 * Heap(힙)  
   \- 힙도 트리로 된 자료 구조이다.
-* 운영 체제의 폴더
+* 운영 체제의 폴더  
 ex) 폴더 구조 및 경로
 <img src='{{ "/TIL/assets/images/2021-12-20-tree_9.png" | relativec_url }}' style="width:350px;" title="트리구조 설명" alt="트리구조 설명"/>
 * 컴퓨터 파일 시스템

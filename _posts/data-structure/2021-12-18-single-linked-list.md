@@ -36,14 +36,14 @@ date: 2021-12-18
 
 ```javascript
 class Node {
-  constroctor(val) {
+  constructor(val) {
     this.val = val;
     this.next = null;
   }
 }
 
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -79,7 +79,7 @@ list.push("HELLO");
 
 ```javascript
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -119,7 +119,7 @@ list.pop();
 
 ```javascript
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -151,14 +151,14 @@ list.shift();
 
 ```javascript
 class Node {
-  constroctor(val) {
+  constructor(val) {
     this.val = val;
     this.next = null;
   }
 }
 
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -193,7 +193,7 @@ list.unshift("HELLO");
 
 ```javascript
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -220,7 +220,7 @@ list.get(2);
 
 ```javascript
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -253,7 +253,7 @@ class Node{
 }
 
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -290,7 +290,7 @@ list.insert(2, "HELLO");
 
 ```javascript
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -323,7 +323,7 @@ list.remove(2);
 
 ```javascript
 class SingleLinkedList {
-  constroctor() {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -365,7 +365,7 @@ list.reverse();
 
 ## 단일 연결리스트의 Big O
 * 접근
-  * **O(N)**
+  * **O(N)** : get, set  
   \- 접근 또는 탐색하고자하는 위치까지 찾아가야 한다.
 * 삽입
   * **O(1)** : push, unshift
@@ -374,9 +374,8 @@ list.reverse();
   * **O(N)** : pop, remove  
   \- 삭제하려는 위치까지 접근해서 삭제해야한다.
 * 탐색
-  * **O(N)** : get, set  
+  * **O(N)**
   \- 접근 또는 탐색하고자하는 위치까지 찾아가야 한다.
-* 삽입 
   
 ## 결론
 단일 연결 리스트는 삽입과 삭제하는 부분에서는 배열보다 앞선다!

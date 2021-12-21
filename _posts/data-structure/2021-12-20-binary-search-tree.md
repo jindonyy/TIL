@@ -21,7 +21,7 @@ date: 2021-12-20
 
 ## 이진 탐색 트리란?
 * 이진 트리에 속해 있는 이진 트리의 특별한 종류이다.
-* 이진 트리와 달리 <a herf="https://jindonyy.github.io/TIL/data%20structure/quick-sort/">퀵 소트</a>와 같이 작은 수가 왼쪽, 큰 수가 오른쪽으로 정렬되어 있다.  
+* 이진 트리와 달리 <a herf="https://jindonyy.github.io/TIL/data%20structure/quick-sort/">퀵 소트</a>처럼 작은 수가 왼쪽, 큰 수가 오른쪽으로 정렬되어 있다.  
 < 옳은 예시 >
 <img src='{{ "/TIL/assets/images/2021-12-20-binary-search-tree_3.png" | relativec_url }}' style="width:400px;" title="이진 탐색 트리 설명" alt="이진 탐색 트리 설명"/>
 < 틀린 예시 >

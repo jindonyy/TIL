@@ -39,8 +39,8 @@ class Node {
   }
 }
 
-class SingleLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -61,7 +61,7 @@ class SingleLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.push("HELLO");
 ```
 <ol>
@@ -83,8 +83,8 @@ list.push("HELLO");
 * 연결 목록의 끝에서 노드 제거해주는 메서드
 
 ```javascript
-class doublyLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -105,7 +105,7 @@ class doublyLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.pop();
 ```
 <ol>
@@ -126,8 +126,8 @@ list.pop();
 * 연결 목록의 시작 부분(head) 노드를 제거해주는 메서드
 
 ```javascript
-class doublyLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -149,7 +149,7 @@ class doublyLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.shift();
 ```
 <ol>
@@ -178,8 +178,8 @@ class Node {
   }
 }
 
-class doublyLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -199,7 +199,7 @@ class doublyLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.unshift("HELLO");
 ```
 <ol>
@@ -221,8 +221,8 @@ list.unshift("HELLO");
 * 연결 목록에서 얻고자 하는 위치의 노드를 검색해주는 메서드
 
 ```javascript
-class doublyLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -245,7 +245,7 @@ class doublyLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.get(2);
 ```
 1. 매개 변수로 index가 들어와야 한다.
@@ -273,8 +273,8 @@ list.get(2);
 * 연결 목록에서 위치에 해당하는 노드 값을 변경해주는 메서드
 
 ```javascript
-class doublyLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -287,7 +287,7 @@ class doublyLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.set(2, "HELLO");
 ```
 1. 매개 변수로 index와 value가 들어와야 한다.
@@ -306,8 +306,8 @@ class Node{
   }
 }
 
-class doublyLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -329,7 +329,7 @@ class doublyLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.insert(2, "HELLO");
 ```
 1. 매개 변수로 index와 value가 들어와야 한다.
@@ -347,8 +347,8 @@ list.insert(2, "HELLO");
 * 연결 리스트이 특정 위치에 노드 제거해주는 매서드
 
 ```javascript
-class doublyLinkedList {
-  constroctor() {
+class DoublyLinkedList {
+  constructor() {
     this.head = null;
     this.tail = null;
     this.length = 0;
@@ -369,7 +369,7 @@ class doublyLinkedList {
   }
 }
 
-const list = new doublyLinkedList();
+const list = new DoublyLinkedList();
 list.remove(2);
 ```
 1. 매개 변수로 index가 들어와야 한다.
