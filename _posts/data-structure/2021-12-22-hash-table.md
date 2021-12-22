@@ -171,10 +171,18 @@ let hashTable = new HashTable(17);
 ```javascript
 set(key, value) {
   let index = this._hash(key);
-  if(!this.buckets[index]) { // 해당 인덱스에 값이 없으면
-    this.buckets[index] = []; // 중첩구조로 사용한 빈 배열
+  const dataArr = this.buckets[index];
+  if(!this.dataArr) { // 해당 인덱스에 값이 없으면
+    this.dataArr = [[key, value]]; // 중첩구조로 사용한 빈 배열
+    return;
   }
-  this.buckets[index].push([key, value]);
+   this.dataArr.forEach((data, i) => {
+    if(data[0] === key) { // 해당 인덱스에 추가하려는 키가 있으면
+      this.dataArr[i][1] = value;
+    } else { // 해당 인덱스에 추가하려는 키가 없으면
+      this.dataArr.push([key, value]);
+    }
+  });
 }
 ```
 
@@ -208,13 +216,11 @@ get(key) {
 
 ```javascript
 keys() {
-  let keysArr = []; // 3중 배열 형태
+  let keysArr = [];
   this.buckets.forEach(dataArr => { // 첫번 째 배열 순회
     if(this.dataArr) { // 해당 인덱스에 값이 있으면
       this.dataArr.forEach(data => { // 그 안 두번 째 배열 순회 // data는 [key, value]의 배열
-        if(!keysArr.includes(this.data[0])) { // 키 배열에 해당 키가 없으면
-          keysArr.push(this.data[0])
-        }
+        keysArr.push(this.data[0])
       });
     }
   });
@@ -230,7 +236,7 @@ keys() {
 
 ```javascript
 values() {
-  let valuesArr = []; // 3중 배열 형태
+  let valuesArr = [];
   this.buckets.forEach(dataArr => { // 첫번 째 배열 순회
     if(this.dataArr) { // 해당 인덱스에 값이 있으면
       this.dataArr.forEach(data => { // 그 안 두번 째 배열 순회 // data는 [key, value]의 배열
@@ -246,13 +252,14 @@ values() {
 
 ### 해시 테이블의 Big O
 * 삽입
-  * 최고, 보통의 경우: `O(1)`  
-    \- 좋은 해시 함수를 이용해 고르게 분배 됐을 경우
-  * 최악의 경우: `O(N)`  
-    \- 나쁜해시 함수를 이용해 한 인덱스에 몰렸을 경우
+  * 중복 값이 허용되는 경우
+    * 최고, 보통의 경우: `O(1)`  
+      \- 좋은 해시 함수를 이용해 고르게 분배 됐을 경우
+    * 최악의 경우: `O(N)`  
+      \- 나쁜해시 함수를 이용해 한 인덱스에 몰렸을 경우
+  * 중복 값이 허용되지 않는 경우
+    \- 추가할 때 항상 중복 값을 체크해줘야하므로 항상 `O(N)` 이 된다.
   * set 메서드
-  * 주의할 점은 위의 해시 테이블은 중복 값들을 허용한다.  
-  중복 값을 허용하지 않는 해시 테이블일 경우에는 추가할 때 항상 중복 값을 체크해줘야하므로 `O(N)` 이 된다.
 * 삭제
   * 최고, 보통의 경우: `O(1)`  
     \- 좋은 해시 함수를 이용해 고르게 분배 됐을 경우
