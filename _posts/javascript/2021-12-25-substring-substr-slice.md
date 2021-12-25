@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [js this method, call, apply, bind]
+  - [js this method, substring, substr, slice]
 date: 2021-12-25
 ---
 
