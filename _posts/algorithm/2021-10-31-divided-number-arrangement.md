@@ -1,5 +1,7 @@
 ---
 title: "<span>프로그래머스</span><span>Lv1</span> 나누어 떨어지는 숫자 배열"
+header:
+  teaser: /assets/images/algorithm/programmers_teaser.png
 layout: single
 classes: wide
 categories:

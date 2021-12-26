@@ -1,5 +1,7 @@
 ---
 title: "<span>프로그래머스</span><span>Lv1</span> 문자열 내림차순으로 배치하기"
+header:
+  teaser: /assets/images/algorithm/programmers_teaser.png
 layout: single
 classes: wide
 categories:

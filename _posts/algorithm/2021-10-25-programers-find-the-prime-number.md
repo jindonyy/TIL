@@ -1,5 +1,7 @@
 ---
 title: "<span>프로그래머스</span><span>Lv1</span> 소수 찾기"
+header:
+  teaser: /assets/images/algorithm/programmers_teaser.png
 layout: single
 classes: wide
 categories:

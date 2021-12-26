@@ -1,5 +1,7 @@
 ---
 title: "해시 테이블(Hash table)"
+header:
+  teaser: /assets/images/data-structure/2021-12-22-hash-table_teaser.png
 layout: single
 classes: wide
 categories:

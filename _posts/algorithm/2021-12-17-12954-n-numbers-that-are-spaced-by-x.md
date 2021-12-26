@@ -1,5 +1,7 @@
 ---
 title: "<span>프로그래머스</span><span>Lv1</span> x만큼 간격이 있는 n개의 숫자"
+header:
+  teaser: /assets/images/algorithm/programmers_teaser.png
 layout: single
 classes: wide
 categories:

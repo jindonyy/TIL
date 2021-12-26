@@ -1,5 +1,7 @@
 ---
 title: "<span>프로그래머스</span><span>Lv1</span> [카카오 인턴] 키패드 누르기"
+header:
+  teaser: /assets/images/algorithm/programmers_teaser.png
 layout: single
 classes: wide
 categories:
