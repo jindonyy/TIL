@@ -11,7 +11,7 @@ date: 2021-12-19
 
 ## 이중 연결 리스트란?
 * <a href="https://jindonyy.github.io/TIL/data%20structure/single-linked-list/">단일 연결 목록</a>과 거의 동일하나 단일 연결 리스트와 달리 모든 노드에 이전 포인터가 있다.
-<img src='{{ "/TIL/assets/images/2021-12-18-doubly-linked-list_1.png" | relativec_url }}' style="width:650px;" title="기수 정렬 설명" alt="기수 정렬 설명"/>
+<img src='{{ "/assets/images/2021-12-18-doubly-linked-list_1.png" | relative_url }}' style="width:650px;" title="기수 정렬 설명" alt="기수 정렬 설명"/>
 
 * 다른 데이터 구조 및 특정 유형의 캐시를 구현하는 데 주로 사용된다.
 

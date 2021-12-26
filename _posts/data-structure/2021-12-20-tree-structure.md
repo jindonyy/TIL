@@ -12,11 +12,11 @@ date: 2021-12-20
 ## 트리 구조란?
 * 나무에서 가지가 뻗는 모양이라 하여 트리 구조라 한다.
 * 부모와 자식 관계의 노드로 구성된 데이터 구조이다.
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_1.png" | relativec_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_2.png" | relativec_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_1.png" | relative_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_2.png" | relative_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
 
 ### 트리 구조 용어
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_3.png" | relativec_url }}' style="width:650px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_3.png" | relative_url }}' style="width:650px;" title="트리구조 설명" alt="트리구조 설명"/>
 
 * **Node(노드)**
   * 트리를 구성하고 있는 기본 요소  
@@ -52,11 +52,11 @@ date: 2021-12-20
 ### 트리 구조의 주의 점
 * 트리 구조는 **자식 관계의 다른 노드만을** 가리켜야 한다.  
 동급의 노드나 부모의 노드를 가리키면 안된다.
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_4.png" | relativec_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_4.png" | relative_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
 위의 구조는 9와 8이 동급의 노드를 가리키므로 트리 구조가 아니다.
 
 * **출발점(root)이 하나**여야 한다.
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_5.png" | relativec_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_5.png" | relative_url }}' style="width:500px;" title="트리구조 설명" alt="트리구조 설명"/>
 
 ### 연결 리스트와 트리 구조
 * 연결 리스트는 일자로 쭉 뻗은 단방향이기 때문에 뒤 또는 앞뒤로 작업이 가능했다.  
@@ -66,21 +66,21 @@ date: 2021-12-20
 ## 트리 구조의 실제 예시
 * HTML DOM  
 ex) html -> head, body -> main, nav, ...
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_6.png" | relativec_url }}' style="width:650px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_6.png" | relative_url }}' style="width:650px;" title="트리구조 설명" alt="트리구조 설명"/>
 
 * 네트워크 라우팅
 * 추상 구문 트리  
 ex) while
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_7.png" | relativec_url }}' style="width:600px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_7.png" | relative_url }}' style="width:600px;" title="트리구조 설명" alt="트리구조 설명"/>
 ex) JSON
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_8.png" | relativec_url }}' style="width:400px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_8.png" | relative_url }}' style="width:400px;" title="트리구조 설명" alt="트리구조 설명"/>
 
 * 인공 지능
 * Heap(힙)  
   \- 힙도 트리로 된 자료 구조이다.
 * 운영 체제의 폴더  
 ex) 폴더 구조 및 경로
-<img src='{{ "/TIL/assets/images/2021-12-20-tree_9.png" | relativec_url }}' style="width:350px;" title="트리구조 설명" alt="트리구조 설명"/>
+<img src='{{ "/assets/images/2021-12-20-tree_9.png" | relative_url }}' style="width:350px;" title="트리구조 설명" alt="트리구조 설명"/>
 * 컴퓨터 파일 시스템
 
 ## 트리 구조의 종류
