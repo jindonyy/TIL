@@ -1,12 +1,14 @@
 ---
 title: "<span>프로그래머스</span><span>Lv1</span> 신규 아이디 추천"
+header:
+  teaser: /assets/images/algorithm/programmers_teaser.png
 layout: single
 classes: wide
 categories:
   - algorithm
 tags:
   - [javascript, algorithm, programers, Level1]
-date: 2021-12-25
+date: 2021-12-26
 ---
 
 ## 문제 설명
