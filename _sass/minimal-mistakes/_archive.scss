@@ -21,7 +21,6 @@
       margin: 3em 0 0;
     }
   }
-
   // .archive__item {
   //   display: flex;
   //   justify-content: space-between;
@@ -32,6 +31,15 @@
     max-width: 500px;
     margin: 0 auto 2rem;
     text-align: center;
+  }
+
+  .taxonomy__section {
+    .archive__item {
+      display: flex;
+      max-width: none;
+      justify-content: space-between;
+      margin: 0 0 1.2rem;
+    }
   }
 }
 
