@@ -7,7 +7,7 @@ classes: wide
 categories:
   - CS
 tags:
-  - [javascript, CS, compiler, interpreter]
+  - [CS, compiler, interpreter]
 date: 2021-12-30
 ---
 
