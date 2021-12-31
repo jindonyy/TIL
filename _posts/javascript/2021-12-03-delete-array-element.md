@@ -5,7 +5,7 @@ classes: wide
 categories:
   - javascript
 tags:
-  - [js delete element, pop, shift, splice]
+  - [js arr, pop, shift, splice]
 date: 2021-12-03
 ---
 
