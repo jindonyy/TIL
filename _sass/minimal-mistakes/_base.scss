@@ -14,7 +14,7 @@ body {
   padding: 0;
   color: $text-color;
   font-family: $global-font-family;
-  line-height: 1.75;
+  line-height: 1.9;
   letter-spacing: 0.015rem;
   background: #e8eaef;
 
@@ -173,6 +173,12 @@ pre {
 pre {
   overflow-x: auto; /* add scrollbars to wide code blocks*/
 }
+pre.white-box {
+  padding: 25px 30px;
+  background: #fff;
+  white-space: pre-wrap;
+  word-break: keep-all;
+}
 
 p > code,
 a > code,
@@ -205,7 +211,7 @@ hr {
 
 ul li,
 ol li {
-  margin-bottom: 0.5em;
+  margin-bottom: 0.3rem;
 }
 
 li ul,
