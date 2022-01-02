@@ -15,7 +15,7 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
+locale                   : "ko-KR"
 title                    : "코딩은 어려워 @_@"
 title_separator          : ""
 subtitle                 : # site tagline that appears below site title in masthead
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Dony :)"
   avatar           : "/assets/images/profile.jpg"
-  bio              : "FE로 성장 중 👶🏻"
+  bio              : "FE로 성장 중 🌱"
   location         : "Seoul"
   email            :
   links:
