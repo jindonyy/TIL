@@ -46,7 +46,7 @@ date: 2022-01-09
 #### 나의 풀이
 ```javascript
 const fs = require('fs');
-const input = fs.readFileSync('./1009.txt').toString().split('\n');
+const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n');
 
 for(let i = 1; i < input.length; i++) {
   const split = input[i].split(' ');
