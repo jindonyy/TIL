@@ -640,7 +640,7 @@ ko: &DEFAULT_KO
   search_placeholder_text    : "검색어를 입력하세요..."
   search_algolia_no_results  :
   results_found              : "개 결과 발견"
-  back_to_top                : "맨 위로 이동"
+  back_to_top                : "🔝"
 ko-KR:
   <<: *DEFAULT_KO
 
