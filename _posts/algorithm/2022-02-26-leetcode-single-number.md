@@ -49,8 +49,6 @@ var singleNumber = function(nums) {
 
     return sortArr[sortArr.length - 1];
 };
-
-console.log(singleNumber([4,1,2,1,2]))
 ```
 시간복잡도: O(N)
 1. nums의 숫자가 한개일 경우 항상 첫번째 인덱스의 값이 single number이다.
