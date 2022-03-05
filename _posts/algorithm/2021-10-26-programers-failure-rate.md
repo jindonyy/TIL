@@ -59,23 +59,38 @@ date: 2021-10-26
 
 ## 답안
 #### 나의 풀이
+2022.03.06 재풀이
 ```javascript
 function solution(N, stages) {
-    var rateArr = [];
-    
-    for(var i = 1; i <= N; i++) {
-        var pass = 0, fail = 0;
-        for(var j = 0, len = stages.length; j < len; j++) {
-            if(stages[j] >= i) pass++;
-            if(stages[j] == i) fail++;
-        }
-        rateArr[i-1] = {stage: i, rate: fail/pass};
+    const stageInfos = [];
+
+    for(let i = 1; i <= N + 1; i++) {
+        const stageInfo = { num : i, pass: stages.length, fail: 0, rate: 0 };
+        stageInfos.push(stageInfo);
     }
+
+    stages.forEach((stage, idx) => {
+        if(stage === stageInfos[stage - 1].num) stageInfos[stage - 1].fail++; 
+    });
     
-    return rateArr.sort((a, b) => b.rate - a.rate).map(v => v.stage);
+    for(let i = 0; i <= N; i++) {
+        if(i !== 0) stageInfos[i].pass = stageInfos[i - 1].pass - stageInfos[i - 1].fail;
+        stageInfos[i].rate = stageInfos[i].fail / stageInfos[i].pass;
+    }
+    stageInfos.pop();
+
+    return stageInfos.sort((a, b) => b.rate - a.rate).map(stage => stage.num);
 }
 ```
-테스트 11 시간 초과ㅠㅠ
+시간복잡도: O(N)
+1. stage번호와 통과한 사람, 실패한 사람을 저장할 객체를 담은 배열을 만든다.  
+밑의 반복문들에 인덱스 계산을 위해 N+1 까지 추가해야 한다.
+1. stages에 요소들은 stage의 번호를 나타냄으로 stageInfos의 인덱스로 사용하여 해당 stage의 fail을 계산한다.  
+stage는 1부터 시작하고 stagesInfo의 인덱스는 0부터 이므로 stage - 1 로 게산한다.
+1. stage들의 pass는 앞 stage.pass - stage.fail이므로 pass를 계산한 뒤,  
+fail / pass로 실패율(rate)를 계산한다.
+1. N + 1의 stage도 들어있으므로 pop해준다.
+1. 각 stage의 rate로 순서를 정렬한 뒤, num으로 map해준 후 반환한다.
 
 #### 옛날 풀이
 ```javascript
@@ -83,28 +98,16 @@ function solution(N, stages) {
     let failure = [];
     
     for(let i = 1; i <= N; i++){
-        let arrival = 0, pass = 0;
-        
-        stages.map(function(v){
-            if(v >= i){
-                arrival++;
-            }
-            if(v == i){
-                pass++;
-            }
+        let arrival = 0, pass = 0;     
+        stages.map(v => {
+            if(v >= i) arrival++;
+            if(v === i) pass++;
         });
-
-        if(arrival !== 0){
-            failure.push({index: i, rate: pass / arrival});
-        } else{
-            failure.push({index: i, rate: 0});
-        }
+        if(arrival !== 0) failure.push({index: i, rate: pass / arrival});
+        else failure.push({ index: i, rate: 0 });
     }
-
     
-    return failure.sort(function(a, b) {
-         return a.rate > b.rate ? -1 : a.rate < b.rate ? 1 : 0;
-    }).map(v => v.index);
+    return failure.sort((a, b) => a.rate > b.rate ? -1 : a.rate < b.rate ? 1 : 0).map(v => v.index);
 }
 ```
 
