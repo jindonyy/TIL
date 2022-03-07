@@ -104,7 +104,7 @@ function merge(arr1, arr2) {
   return results;
 }
 
-function mergeSort() {
+function mergeSort(arr) {
   if(arr.length <= 1) return arr;
   // 제일 안쪽의 재귀로 들어왔을 때(배열의 길이가 1개 이하일 때) arr을 return 해주어 재귀를 빠져나온다.
 
@@ -116,7 +116,7 @@ function mergeSort() {
   // 나누어준 배열들을 정렬과 합병을 해주는 merge 함수로 넘겨주고 그 결과 값을 마지막에 return 해준다.
 }
 
-mergeSort([1, 10, 50, 2, 14, 99, 100]]);
+mergeSort([1, 10, 50, 2, 14, 99, 100]);
 // [1, 2, 10, 14, 50, 99, 100]
 ```
 <img src='{{ "/assets/images/2021-12-14-post-img3.png" | relative_url }}' style="width:650px;" title="합병 정렬 설명" alt="합병 정렬 설명"/>
