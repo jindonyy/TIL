@@ -45,7 +45,7 @@ Output: true
  * @return {boolean}
  */
 const containsDuplicate = function (nums) {
-  return new Set([...nums]).size < nums.length ? true : false;
+  return new Set(nums).size < nums.length;
 };
 ```
 
