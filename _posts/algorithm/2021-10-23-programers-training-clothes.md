@@ -11,82 +11,132 @@ tags:
 date: 2021-10-23
 ---
 
+2022.03.27 재풀이
+
 ## 문제 설명
+
 점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.  
 전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
 
 ### 제한 사항
-* 전체 학생의 수는 2명 이상 30명 이하입니다.
-* 체육복을 도난당한 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
-* 여벌의 체육복을 가져온 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
-* 여벌 체육복이 있는 학생만 다른 학생에게 체육복을 빌려줄 수 있습니다.
-* 여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. 이때 이 학생은 체육복을 하나만 도난당했다고 가정하며, 남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.
+
+- 전체 학생의 수는 2명 이상 30명 이하입니다.
+- 체육복을 도난당한 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+- 여벌의 체육복을 가져온 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+- 여벌 체육복이 있는 학생만 다른 학생에게 체육복을 빌려줄 수 있습니다.
+- 여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. 이때 이 학생은 체육복을 하나만 도난당했다고 가정하며, 남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.
 
 ### 입출력 예
 
-|n|lost|reserve|return|
-|-|-|-|
-|5|[2, 4]|[1, 3, 5]|5|
-|5|[2, 4]|[3]|4|
-|3|[3]|[1]|2|
+| n   | lost   | reserve   | return |
+| --- | ------ | --------- | ------ |
+| 5   | [2, 4] | [1, 3, 5] | 5      |
+| 5   | [2, 4] | [3]       | 4      |
+| 3   | [3]    | [1]       | 2      |
 
 ### 입출력 예 설명
+
 예제 #1
-1번 학생이 2번 학생에게 체육복을 빌려주고, 3번 학생이나 5번 학생이 4번 학생에게 체육복을 빌려주면 학생 5명이 체육수업을 들을 수 있습니다.  
-  
+1번 학생이 2번 학생에게 체육복을 빌려주고, 3번 학생이나 5번 학생이 4번 학생에게 체육복을 빌려주면 학생 5명이 체육수업을 들을 수 있습니다.
+
 예제 #2
 3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
 
 ## 답안
+
 #### 나의 풀이
+
+```javascript
+function splice(lost, reserve, i, j) {
+  lost.splice(i, 1);
+  reserve.splice(j, 1);
+}
+
+function solution(n, lost, reserve) {
+  lost = lost.sort((a, b) => a - b);
+  reserve = reserve.sort((a, b) => a - b);
+
+  for (let i = 0; i < lost.length; i++) {
+    for (let j = 0; j < reserve.length; j++) {
+      if (lost[i] === reserve[j]) {
+        splice(lost, reserve, i, j);
+        i--;
+        j--;
+        break;
+      }
+    }
+  }
+
+  for (let i = 0; i < lost.length; i++) {
+    for (let j = 0; j < reserve.length; j++) {
+      if (lost[i] === reserve[j] - 1 || lost[i] === reserve[j] + 1) {
+        splice(lost, reserve, i, j);
+        i--;
+        j--;
+        break;
+      }
+    }
+  }
+
+  return n - lost.length;
+}
+```
+
+시간복잡도: O(N<sup>2</sup>)
+
+#### 옛날 풀이1
+
 ```javascript
 function spliceEl(arr, el) {
-    arr.splice(arr.indexOf(el), 1);
+  arr.splice(arr.indexOf(el), 1);
 }
 
 function solution(n, lost, reserve) {
-    lost.sort((a, b) => a -b);
-    reserve.sort((a, b) => a -b);
-    
-    for(var i = 0, len = reserve.length; i < len; i++) {
-        if(lost.indexOf(reserve[i]) != -1) {
-            spliceEl(lost, reserve[i]);
-            spliceEl(reserve, reserve[i]);
-            i--;
-        }
-    }
+  lost.sort((a, b) => a - b);
+  reserve.sort((a, b) => a - b);
 
-    reserve.forEach(el => {
-        if(lost.indexOf(el-1) != -1) {
-            spliceEl(lost, el-1);
-        } else if(lost.indexOf(el+1) != -1) {
-            spliceEl(lost, el+1);
-        }
-    });
-    
-    return n - lost.length;
+  for (var i = 0, len = reserve.length; i < len; i++) {
+    if (lost.indexOf(reserve[i]) != -1) {
+      spliceEl(lost, reserve[i]);
+      spliceEl(reserve, reserve[i]);
+      i--;
+    }
+  }
+
+  reserve.forEach((el) => {
+    if (lost.indexOf(el - 1) != -1) {
+      spliceEl(lost, el - 1);
+    } else if (lost.indexOf(el + 1) != -1) {
+      spliceEl(lost, el + 1);
+    }
+  });
+
+  return n - lost.length;
 }
 ```
+
 예시보고 정렬된 배열만 들어오는줄 알고 sort 안했었어서 18, 20번 계속 오류떴었다..
 
-#### 옛날 풀이
+#### 옛날 풀이2
+
 ```javascript
 function solution(n, lost, reserve) {
-    var answer = n - lost.length;
+  var answer = n - lost.length;
 
-    var same = lost.filter(item => reserve.includes(item));
-    lost = lost.filter(item => !same.includes(item));
-    reserve = reserve.filter(item => !same.includes(item));
+  var same = lost.filter((item) => reserve.includes(item));
+  lost = lost.filter((item) => !same.includes(item));
+  reserve = reserve.filter((item) => !same.includes(item));
 
-    var prev = reserve.filter(item => lost.includes(item-1));
-    lost = lost.filter(item => !prev.includes(item+1));
-    reserve = reserve.filter(item => !prev.includes(item));
+  var prev = reserve.filter((item) => lost.includes(item - 1));
+  lost = lost.filter((item) => !prev.includes(item + 1));
+  reserve = reserve.filter((item) => !prev.includes(item));
 
-    var next = reserve.filter(item => lost.includes(item+1));
+  var next = reserve.filter((item) => lost.includes(item + 1));
 
-    return answer + same.length + prev.length + next.length;
+  return answer + same.length + prev.length + next.length;
 }
 ```
+
 왜 이렇게 풀었었지..?  
 예전에는 통과됐었지만 현재 테스트케이스 추가로 17 ~ 20은 실패로 뜬다.  
 마지막 제한 사항 때문인 것 같다.
