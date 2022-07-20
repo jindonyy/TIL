@@ -2,7 +2,7 @@
    BASE ELEMENTS
    ========================================================================== */
 // @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600&display=swap");
 html {
   /* sticky footer fix */
   position: relative;
@@ -17,6 +17,7 @@ body {
   line-height: 1.9;
   letter-spacing: 0.015rem;
   background: #e8eaef;
+  word-break: keep-all;
 
   &.overflow--hidden {
     /* when primary navigation is visible, the content in the background won't scroll */
@@ -119,11 +120,12 @@ abbr[data-original-title] {
 /* blockquotes */
 
 blockquote {
-  margin: 2em 1em 2em 0;
+  margin: 1em 1em 2em 0;
   padding-left: 1em;
   padding-right: 1em;
   font-style: italic;
   border-left: 0.25em solid $primary-color;
+  font-style: normal;
 
   cite {
     font-style: italic;
@@ -138,8 +140,8 @@ blockquote {
 /* links */
 
 a {
-  text-decoration: none; 
-  
+  text-decoration: none;
+
   &:focus {
     @extend %tab-focus;
   }
