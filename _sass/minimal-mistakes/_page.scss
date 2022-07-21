@@ -29,7 +29,7 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .initial-content,
@@ -39,25 +39,24 @@ body {
 }
 
 .page {
-  
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
     padding-right: $right-sidebar-width-narrow;
   }
-  
+
   @include breakpoint($x-large) {
     width: calc(100% - #{$right-sidebar-width});
     padding-left: 20px;
     padding-right: $right-sidebar-width;
   }
-  
+
   .page__inner-wrap {
     float: left;
     margin: 3.5em 0 0;
     width: 100%;
     clear: both;
-    
+
     @include breakpoint($x-large) {
       padding-left: 30px;
     }
@@ -76,11 +75,17 @@ body {
     .page__content {
       h1,
       h2,
-      h3,
+      h3 {
+        margin: 2.8rem 0 0.8rem;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+
       h4,
       h5,
       h6 {
-        margin: 2.8rem 0 0.8rem;
+        margin: 2rem 0 0.4rem;
         &:first-child {
           margin-top: 0;
         }
@@ -148,22 +153,27 @@ body {
     border-bottom: 1px solid $border-color;
   }
 
-	h1, h2, h3, h4, h5, h6 {
-		.header-link {
-			position: relative;
-			left: 0.5em;
-			opacity: 0;
-			font-size: 0.8em;
-			-webkit-transition: opacity 0.2s ease-in-out 0.1s;
-			-moz-transition: opacity 0.2s ease-in-out 0.1s;
-			-o-transition: opacity 0.2s ease-in-out 0.1s;
-			transition: opacity 0.2s ease-in-out 0.1s;
-		}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    .header-link {
+      position: relative;
+      left: 0.5em;
+      opacity: 0;
+      font-size: 0.8em;
+      -webkit-transition: opacity 0.2s ease-in-out 0.1s;
+      -moz-transition: opacity 0.2s ease-in-out 0.1s;
+      -o-transition: opacity 0.2s ease-in-out 0.1s;
+      transition: opacity 0.2s ease-in-out 0.1s;
+    }
 
-		&:hover .header-link {
-			opacity: 1;
-		}
-	}
+    &:hover .header-link {
+      opacity: 1;
+    }
+  }
 
   p,
   li,
