@@ -19,14 +19,14 @@ date: 2022-7-20
 2. 서버로부터 응답된 HTML과 CSS를 브라우저의 렌더링 엔진이 파싱하여 DOM과 CSSOM을 생성하고, 이들을 결합하여 **렌더 트리**를 생성한다.
 3. 브라우저의 자바스크립트 엔진은 서버로부터 응답된 자바스크립트를 파싱하여 AST를 생성하고, 바이트 코드로 변환하여 실행한다. 이 때 **자바스크립트는 DOM API를 통해 DOM이나 CSSOM을 변경**할 수 있다. 변경된 DOM과 CSSOM은 다시 렌더 트리로 결합된다.
 4. 렌더 트리를 기반으로 HTML 요소의 레이아웃(위치와 크기)을 계산하고, 브라우저 화면에 **HTML 요소를 페인팅**한다.
-   <img src='https://cypress-pink-680.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4e519839-309c-4f27-bd1c-86329cc1abfe%2Fclient-server.png?table=block&id=179760f8-8bd9-43cc-9ad0-cc6e4719174a&spaceId=de050283-0f2d-4547-b1c0-171096436e1e&width=2000&userId=&cache=v2' style="margin-bottom: 0;" title="브라우저 렌더링 과정" alt="브라우저 렌더링 과정"/>
+   <img src='https://cypress-pink-680.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F4e519839-309c-4f27-bd1c-86329cc1abfe%2Fclient-server.png?table=block&id=179760f8-8bd9-43cc-9ad0-cc6e4719174a&spaceId=de050283-0f2d-4547-b1c0-171096436e1e&width=2000&userId=&cache=v2' style="margin-bottom: 0;" alt="브라우저 렌더링 과정"/>
    <small>출처 | https://poiemaweb.com/js-browser</small>
 
 ## 1. 브라우저의 요청과 서버의 응답
 
 렌더링에 필요한 리소스는 모두 서버에 존재한다. 때문에 필요한 리소스를 먼저 서버에 요청해야 한다.  
 서버에 요청하기 위해서 브라우저는 주소창을 제공한다. 브라우저의 주소창에 URL을 입력하고 엔터를 누르면 호스트 이름이 DNS를 통해 IP 주소로 변환된다. 그럼 이 IP 주소를 가진 서버에게 요청을 전송하게 되는 것이다.
-<img src='{{ "/assets/images/2022-07-20-URL.png" | relative_url }}' style="width: 520px;" title="URL 설명" alt="URL 설명"/>  
+<img src='{{ "/assets/images/2022-07-20-URL.png" | relative_url }}' style="width: 520px;" alt="URL 설명"/>  
 주소창에 www.google.com을 입력한 후 엔터를 치면, google.com으로 루트 요청(protocol과 host만 있는 요청)이 가게 된다. 루트 요청은 암묵적으로 index.html을 응답하도록 기본 설정이 되어 있어 index.html이 응답으로 오게 된다.  
 만약, 정적 파일을 서버에 요청하려면 www.google.com/data/data.json 과 같이 정적 파일의 경로(path)를 URI의 호스트 뒤에 입력해주면 된다.  
 <br>
@@ -42,12 +42,12 @@ URL을 통해 서버의 응답으로 온 HTML 문서는 문자열로만 이루�
 > 프로그래밍 언어의 문법에 맞게 작성된 텍스트 문서의 문자열을 토큰으로 분해하고, 토큰에 문법적 의미와 구조를 반영하여 **파스 트리를 생성**하는 일련의 과정이
 
 아래의 그림은 브라우저가 HTML을 파싱하여 브라우저가 이해할 수 있는 자료구조인 DOM을 생성하는 과정이다.
-<img src='https://velog.velcdn.com/images%2Fdev_jazziron%2Fpost%2Fdceb8a33-ee17-456b-b5fb-738e51c4ece6%2Fimage.png' title="HTML 파싱과 DOM 생성" alt="HTML 파싱과 DOM 생성"/>
+<img src='https://velog.velcdn.com/images%2Fdev_jazziron%2Fpost%2Fdceb8a33-ee17-456b-b5fb-738e51c4ece6%2Fimage.png' alt="HTML 파싱과 DOM 생성"/>
 <small>출처 | https://poiemaweb.com/js-dom</small>
 
 1. 브라우저는 서버가 응답한 HTML 문서를 바이트(2진수) 형태로 응답받는다. 그리고 이 바이트 형태의 HTML 문서는 meta 태그의 charset 속성에 지정된 인코딩 방식(ex: UTF-8)을 기준으로 문자열로 변환된다.  
    meta 태그에 지정된 인코딩 방식은 content-type: text/html; charset=utf-8과 같이 응답 헤더에 담겨온다. 브라우저는 이를 확인하고 문자열로 변환한다.
-   <img src='https://cypress-pink-680.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F692b9c53-4ab6-4c49-92f1-9efab48d9999%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-03-31_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_6.22.22.png?table=block&id=e835c921-ff63-4472-9982-97d13ee969b3&spaceId=de050283-0f2d-4547-b1c0-171096436e1e&width=2000&userId=&cache=v2' style="width: 521px;margin-bottom: 0.4em;" title="서버의 응답에 header" alt="서버의 응답에 header"/>
+   <img src='https://cypress-pink-680.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F692b9c53-4ab6-4c49-92f1-9efab48d9999%2F%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2022-03-31_%E1%84%8B%E1%85%A9%E1%84%8C%E1%85%A5%E1%86%AB_6.22.22.png?table=block&id=e835c921-ff63-4472-9982-97d13ee969b3&spaceId=de050283-0f2d-4547-b1c0-171096436e1e&width=2000&userId=&cache=v2' style="width: 521px;margin-bottom: 0.4em;" alt="서버의 응답에 header"/>
    <small style="display: block;margin-bottom: 2em;">출처 | https://cypress-pink-680.notion.site/c858833d3f6d4a5e8bad4a0a85abec2d</small>
 2. 문자열로 변환된 HTML 문서를 읽어 최소 단위인 토큰들로 분해한다.
    > 💡 [토큰(token)](https://kin.naver.com/qna/detail.nhn?d1id=1&dirId=1040101&docId=61973019&qb=7YyM7IScIO2GoO2BsCDrnLs=&enc=utf8&section=kin&rank=3&search_sort=0&spq=0) 이란?  
@@ -61,7 +61,7 @@ URL을 통해 서버의 응답으로 온 HTML 문서는 문자열로만 이루�
 그리고 link 태그의 href에 지정된 CSS 파일을 서버에 요청하거나, style 태그 내의 CSS를 HTML과 동일한 파싱 과정을(바이트 -> 문자 -> 토큰 -> 노드 -> CSSOM) 거쳐 CSSOM을 생성한다.  
 CSS 파싱이 완성되면 HTML 파싱을 중단되었던 지점부터 다시 시작한다.
 CSSOM은 CSS의 상속을 반영하여 생성된다.
-<img src='https://cypress-pink-680.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8f3c37cd-ea32-4b99-8b25-fb6608e4029a%2Fcssom-tree.png?table=block&id=684dba78-f904-4dbe-86cb-6975614848f3&spaceId=de050283-0f2d-4547-b1c0-171096436e1e&width=1160&userId=&cache=v2' style="margin-bottom: 0.4em;" title="서버의 응답에 header" alt="서버의 응답에 header"/>
+<img src='https://cypress-pink-680.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F8f3c37cd-ea32-4b99-8b25-fb6608e4029a%2Fcssom-tree.png?table=block&id=684dba78-f904-4dbe-86cb-6975614848f3&spaceId=de050283-0f2d-4547-b1c0-171096436e1e&width=1160&userId=&cache=v2' style="margin-bottom: 0.4em;" alt="CSSOM 생성"/>
 <small style="display: block;margin-bottom: 2em;">출처 | https://cypress-pink-680.notion.site/c858833d3f6d4a5e8bad4a0a85abec2d</small>
 
 ## 2-3. 렌더 트리 생성
@@ -174,3 +174,8 @@ reflow가 일어나면 repaint도 다시 일어나게 되지만, 꼭 reflow가 �
 <br>
 <br>
 레이아웃 계산과 다시 실행되는 리렌더링은 비용이 많이 드는 작업이므로, 가급적 리렌더링이 빈번하게 발생하지 않도록 주의하는 것이 좋다.
+
+## Reference
+
+- 모던 자바스크립트
+- [도비 세미나 노션](https://cypress-pink-680.notion.site/c858833d3f6d4a5e8bad4a0a85abec2d)
