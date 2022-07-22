@@ -26,7 +26,7 @@ date: 2022-7-20
 
 렌더링에 필요한 리소스는 모두 서버에 존재한다. 때문에 필요한 리소스를 먼저 서버에 요청해야 한다.  
 서버에 요청하기 위해서 브라우저는 주소창을 제공한다. 브라우저의 주소창에 URL을 입력하고 엔터를 누르면 호스트 이름이 DNS를 통해 IP 주소로 변환된다. 그럼 이 IP 주소를 가진 서버에게 요청을 전송하게 되는 것이다.
-<img src='{{ "/assets/images/2022-07-20-URL.png" | relative_url }}' style="width: 520px;" alt="URL 설명"/>  
+<img src='{{ "/assets/images/javascript/2022-07-20-URL.png" | relative_url }}' style="width: 520px;" alt="URL 설명"/>  
 주소창에 www.google.com을 입력한 후 엔터를 치면, google.com으로 루트 요청(protocol과 host만 있는 요청)이 가게 된다. 루트 요청은 암묵적으로 index.html을 응답하도록 기본 설정이 되어 있어 index.html이 응답으로 오게 된다.  
 만약, 정적 파일을 서버에 요청하려면 www.google.com/data/data.json 과 같이 정적 파일의 경로(path)를 URI의 호스트 뒤에 입력해주면 된다.  
 <br>
